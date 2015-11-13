@@ -79,6 +79,7 @@ button:active, #ui-body-close:active {
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// Begin Inventory Macros
 // Original macros by F2Andy: http://strugglingwithtwine.blogspot.ca/2014/03/handling-inventory.html
 //
@@ -178,6 +179,7 @@ macros.emptyInv = {
   }
 };
 // End Inventory Macros
+
 </script><tw-passagedata pid="1" name="Start" tags="" position="2095,225">&lt;&lt;initInv&gt;&gt;
 You are in a room and a [[woman-&gt;mom_desc]] is standing across a table from you.
 
@@ -189,7 +191,7 @@ She slowly raises her non-eyes from the stone to you. Your eyes meet. It is like
 
 Her face is blank, with the slightest hint of [[concern-&gt;part_2]]</tw-passagedata><tw-passagedata pid="3" name="cold_room" tags="" position="1900,155">The granite lining the room reflect a chill that cuts through you.
 
-The [[woman-&gt;mom_desc]] raises her head, as if motioning to [[speak -&gt;part_2]] </tw-passagedata><tw-passagedata pid="4" name="shadows_desc" tags="" position="2556,159">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="egg_desc" tags="" position="2544,284">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="part_2" tags="" position="2708,12">&quot;This is my child&quot;, she says, gesturing with her eyes towards the ethereal rock lying on the table. &quot;My Master needs me to prepare for the coming Epoch; I need you to watch....&quot;
+The [[woman-&gt;mom_desc]] raises her head, as if motioning to [[speak -&gt;part_2]] </tw-passagedata><tw-passagedata pid="4" name="shadows_desc" tags="" position="2556,159">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="egg_desc" tags="" position="2544,284">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="part_2" tags="" position="2700,0">&quot;This is my child&quot;, she says, gesturing with her eyes towards the ethereal rock lying on the table. &quot;My Master needs me to prepare for the coming Epoch; I need you to watch....&quot;
 
 She trails off.
 
@@ -208,9 +210,11 @@ You respond...
 &quot;For now. Not for long.&quot; She motions you closer.
 
 [[Move closer-&gt;move_closer]]
-[[Stay where you are-&gt;stay_put]]</tw-passagedata><tw-passagedata pid="8" name="its_a_girl" tags="" position="2860,168">&lt;&lt;set $gender to &quot;female&quot;&gt;&gt;
-&lt;&lt;set $poss to &quot;hers&quot;&gt;&gt;
-&lt;&lt;set $cposs to &quot;Hers&quot;&gt;&gt;
+[[Stay where you are-&gt;stay_put]]</tw-passagedata><tw-passagedata pid="8" name="its_a_girl" tags="" position="2850.0002000000004,150">&lt;&lt;set $gender to &quot;female&quot;&gt;&gt;
+&lt;&lt;set $poss to &quot;her&quot;&gt;&gt;
+&lt;&lt;set $cposs to &quot;Her&quot;&gt;&gt;
+&lt;&lt;set $possS to &quot;hers&quot;&gt;&gt;
+&lt;&lt;set $cpossS to &quot;Hers&quot;&gt;&gt;
 &lt;&lt;set $obj to &quot;her&quot;&gt;&gt;
 &lt;&lt;set $cobj to &quot;Her&quot;&gt;&gt;
 &lt;&lt;set $subj to &quot;she&quot;&gt;&gt;
@@ -233,7 +237,7 @@ She set her gaze back on the cloudy black stone.
 
 Does $subj [[have a name?-&gt;boy_name]]
 [[Wait...what&#x27;s that about the sky?-&gt;ominousforeboding]]
-</tw-passagedata><tw-passagedata pid="10" name="move_closer" tags="" position="3116,0">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="stay_put" tags="" position="3086.666666666667,148.33333333333334">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="give_name" tags="" position="2703.3333333333335,326.6666666666667">&lt;&lt;set $name to prompt(&quot;I think...&quot;)&gt;&gt;
+</tw-passagedata><tw-passagedata pid="10" name="move_closer" tags="" position="3116,0">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="stay_put" tags="" position="3086,148">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="give_name" tags="" position="2703,326">&lt;&lt;set $name to prompt(&quot;I think...&quot;)&gt;&gt;
 &lt;&lt;display &quot;conf_name&quot;&gt;&gt;
 </tw-passagedata><tw-passagedata pid="13" name="conf_name" tags="" position="1960,400">&quot;$name...&quot;
 
@@ -251,14 +255,14 @@ There was no hint of malice in her voice.
 
 [[Oh, um, what should I call $obj?-&gt;boy_name_2]]
 [[Why would I ever do something like that? -&gt;why]]
-[[No I will not-&gt;refusal]]</tw-passagedata><tw-passagedata pid="16" name="boy_name_2" tags="" position="2083.3333333333335,723.3333333333334">&quot;Call him whatever [[you would-&gt;give_name]] like&quot;</tw-passagedata><tw-passagedata pid="17" name="why" tags="" position="2225,706">&quot;Because I picked you to. That should be reason enough&quot;
+[[No I will not-&gt;refusal]]</tw-passagedata><tw-passagedata pid="16" name="boy_name_2" tags="" position="2083,723">&quot;Call him whatever [[you would-&gt;give_name]] like&quot;</tw-passagedata><tw-passagedata pid="17" name="why" tags="" position="2225,706">&quot;Because I picked you to. That should be reason enough&quot;
 
 [[Why should I care what you want with my life? -&gt; shd_i_care]]
 [[It&#x27;s not. I don&#x27;t even know who you are. -&gt; not_reson_enf]]
 [[Why is $subj so important? -&gt;who_is_babby]]</tw-passagedata><tw-passagedata pid="18" name="refusal" tags="" position="2416,604">&quot;Are you certain? You are my last hope&quot;
 
 [[Absolutely-&gt;abs_refusal]]
-[[On second thought...-&gt;back_down]]</tw-passagedata><tw-passagedata pid="19" name="abs_refusal" tags="" position="3085,531.6666666666667">&quot;Very well, you will indeed suffer in the end.&quot;
+[[On second thought...-&gt;back_down]]</tw-passagedata><tw-passagedata pid="19" name="abs_refusal" tags="" position="3085,531">&quot;Very well, you will indeed suffer in the end.&quot;
 
 Your eyes feel heavy, as you fall asleep.
 
@@ -268,7 +272,7 @@ Your eyes feel heavy, as you fall asleep.
 
 [[Sentence?-&gt;sentence]]
 [[I won&#x27;t do it-&gt;refusal]] 
-[[Well...tell me what I need to do-&gt;ready]]</tw-passagedata><tw-passagedata pid="23" name=" not_reson_enf" tags="" position="2833.3333333333335,611.6666666666667">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="who_is_babby" tags="" position="2633.3333333333335,667">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="sentence" tags="" position="2956.666666666667,836.6666666666667">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="ready" tags="" position="2816.666666666667,836.6666666666667">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="day_1" tags="" position="1780,480">&lt;&lt;set $day to 1&gt;&gt;
+[[Well...tell me what I need to do-&gt;ready]]</tw-passagedata><tw-passagedata pid="23" name=" not_reson_enf" tags="" position="2833,611">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="who_is_babby" tags="" position="2633,667">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="sentence" tags="" position="2956,836">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="ready" tags="" position="2816,836">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="day_1" tags="" position="1780,480">&lt;&lt;set $day to 1&gt;&gt;
 &lt;&lt;set $actions to 5&gt;&gt;
 &lt;&lt;set $inv to []&gt;&gt;
 You wake up in a bed you recognize, under a ceiling you know well.
@@ -353,14 +357,14 @@ A smooth and black opalescent stone.
 Nothing jumps out at you, most probably because you cannot articulate your symptoms.
 
 [[Take some painkillers-&gt;pills]]
-[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="39" name="breakfast" tags="" position="1785,781.6666666666667">You pour youself a bowl of cereal, dry. You take a bite, and almost reflexively spit it back out. 
+[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="39" name="breakfast" tags="" position="1785,781">You pour youself a bowl of cereal, dry. You take a bite, and almost reflexively spit it back out. 
 
 You taste blood in your mouth, but cannot find a cut.
 
 [[Return to room-&gt;notice_stone]]
 
 </tw-passagedata><tw-passagedata pid="40" name="pills" tags="" position="1535,601">You pop a few pills into your mouth and choke them down. Your tongue feels like sharkskin
-[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="41" name="stone_closer" tags="" position="1716.6666666666667,1100">You inch closer to the stone.
+[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="41" name="stone_closer" tags="" position="1716,1100">You inch closer to the stone.
 
 It looks like obsidian glass with a membrane of cloudy neon film undulating beneath its surface. Like a droplet of liquid nebula.
 
@@ -416,35 +420,35 @@ It faded, became particulate, and solidified again. Veins of iridescent light ca
 
 It was now that you noticed amidst the lightshow that the black backdrop itself was seething and contorting growing slightly larger and tinting the cloud with an uncomfortable darkness. Each particle it touched became glass and settled on top of its crystalline shell. The black core wrapped around its own membrane, as it pulsed and grew and was out in a splash of fluid and glass.
 
-Laying there right on your windowsill...was [[something-&gt;room]]</tw-passagedata><tw-passagedata pid="46" name="room" tags="" position="1720,1400">&lt;&lt;set $stageOfLife&gt;&gt;
+Laying there right on your windowsill...was [[something-&gt;room]]</tw-passagedata><tw-passagedata pid="46" name="room" tags="" position="1700,1400">&lt;&lt;set $stageOfLife&gt;&gt;
 &lt;&lt;set $timeOfDay = 1&gt;&gt;
 &lt;&lt;if $timeOfDay &lt;= 3&gt;&gt;
 &lt;&lt;if $day == 1&gt;&gt;
 &lt;&lt;if visited(&quot;room&quot;) == 1&gt;&gt;
 &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;$subj is cute, if a little sinister, with eyes like oil and skin that looks wet but scaly. And then $subj smiles a devious, horrid, otherworldly smile.
-&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;$subj looks awfully sturdy, for a newbord, with half formed redbrown wings and bony growths which almost resemble armor. $subj pulls $self up onto $poss two clawed feet
+&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;$subj looks awfully sturdy, for a newbord, with half formed redbrown wings (or fins, you cannot quite tell) and bony growths which almost resemble armor. $subj pulls $self up onto $poss two clawed feet
 &lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;$subj is a gelatenous, half-etheral mass that is dripping tentacles that almost look like ink. But the eye, that one large oscillating eye. $subj knows you.
 &lt;&lt;/if&gt;&gt;
-[[Feed-&gt;feed]] $obj (1 action and some food) 
-[[Play with-&gt;play_with]] $obj (1 action)
-[[Go out with-&gt;go_out]] $obj(2 actions)
+[[Feed-&gt;feed]] $obj //(1 action and a food item)// 
+[[Play with-&gt;play_with]] $obj //(1 action)//
+[[Go out with-&gt;go_out]] $obj//(2 actions)//
 [[Look at-&gt;examine]] $name
-[[Wait (1 action)-&gt;wait]]
+[[Wait -&gt;wait]]//(1 action)//
 &lt;&lt;else&gt;&gt;
 &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;
 $subj is watching you, grinning.&lt;&lt;if $fury &gt;= $maxFury * 0.5&gt;&gt; You feel cold&lt;&lt;elseif $fury &gt;= $maxFury * .75&gt;&gt; You do not know where $subj is.&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;
 
-$subj is floating and oscillating, harmonically resonating with a dull hum to ensure that you know something is amiss.&lt;&lt;if $fury &gt;= $maxFury * 0.5&gt;&gt; You are fatigued as its lifeless eye follows you around your room&lt;&lt;elseif $fury &gt;= $maxFury * .75&gt;&gt; It is basking in the streams of sunlight, transmuting brightness into a cloak of shadow&lt;&lt;/if&gt;&gt;
+$subj is floating and oscillating, harmonically resonating with a dull hum to ensure that you know something is amiss.&lt;&lt;if $fury &gt;= $maxFury * 0.5&gt;&gt; You are fatigued as its lifeless eye follows you around your room&lt;&lt;elseif $fury &gt;= $maxFury * .75&gt;&gt; $subj is basking in the streams of sunlight, transmuting brightness into a cloak of shadow&lt;&lt;/if&gt;&gt;
 
 Your room is &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;frigid.&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;dark.&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;warm.&lt;&lt;/if&gt;&gt;
 
 What do you want to do?
-[[Feed $name (1 action and some food) -&gt;feed]]
-[[Play with $name (1 action)-&gt;play_with]]
-[[Go out with $name(2 actions)-&gt;go_out]]
-[[Look at $name-&gt;examine]]
-[[Wait (1 action)-&gt;wait]]
+[[Feed $name  -&gt;feed]]//(1 action and some food)//
+[[Play with $name -&gt;play_with]]//(1 action)//
+[[Go out -&gt;go_out]]with $name//(2 actions)//
+[[Look at -&gt;examine]]$name
+[[Wait -&gt;wait]]//(1 action)//
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $day == 2&gt;&gt;
@@ -462,9 +466,9 @@ You need sleep, today was a long day.
 &lt;&lt;if $inventory.contains(&quot;soul&quot;) and $actions &gt; 0&gt;&gt;[[Feed soul to $name(1 action)-&gt;soul]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $inventory.contains(&quot;blood&quot;) and $actions &gt; 0&gt;&gt;[[Feed blood to $name(1 action)-&gt;blood]]&lt;&lt;/if&gt;&gt;
 [[Nothing right now-&gt;room]]
-</tw-passagedata><tw-passagedata pid="49" name="play_with" tags="" position="1864,1548">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="go_out" tags="" position="2015,1546.6666666666667">&lt;&lt;if timeOfDay == 0</tw-passagedata><tw-passagedata pid="51" name="examine" tags="" position="2165,1550">&lt;&lt;if $energy gte ($maxEnergy * .5) and $fury lte $maxFury * .5&gt;&gt;
+</tw-passagedata><tw-passagedata pid="49" name="play_with" tags="" position="1864,1548">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="go_out" tags="" position="2015,1546">&lt;&lt;if timeOfDay == 0</tw-passagedata><tw-passagedata pid="51" name="examine" tags="" position="2165,1550">&lt;&lt;if $energy gte ($maxEnergy * .5) and $fury lte $maxFury * .5&gt;&gt;
 $name is looking perky. $poss &lt;&lt;if $type == &quot;Deceptive&quot;&gt;&gt;beady black eyes do not betray any real emotion but $subj is still grinning.&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;tentacles wiggle erratically and $poss tyrant eye tracks you around your room.&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;$cposs wings are not fully formed yet, but its chirps contentedly.&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="wait" tags="" position="2303.3333333333335,1515">&lt;&lt;set $passTheTime&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="wait" tags="" position="2300,1500">&lt;&lt;set $passTheTime&gt;&gt;
 
 You try to pass some time, and not think about the creature in your room.
 Do you want to:
@@ -534,12 +538,22 @@ $name+&#x27;s eyes light up as the soul turns black and is consumed
 $name turns $possessive nose up at the soul, &lt;&lt;if $characteristics.containsAny[&quot;Malevolent&quot;, &quot;Discontented&quot;, &quot;Manipulative&quot;]&gt;&gt;and refuses to eat it&lt;&lt;set $actions += 1&gt;&gt;&lt;&lt;else&gt;&gt;but chokes it down anyways &lt;&lt;set $energy -=1&gt;&gt;&lt;&lt;/if&gt;&gt;
 [[Feed some more?-&gt;feed]]
 [[Do something else?-&gt;room]]</tw-passagedata><tw-passagedata pid="56" name="Inventory" tags="" position="2031,1356">&lt;&lt;inv&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="RandomEvents" tags="" position="2186,1355">&lt;&lt;set $withCreature = true&gt;&gt;
-&lt;&lt;set $events = [0, 1, 2, 3, 4, 5, 6, 7]&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="chores" tags="" position="2315,1700">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="59" name="entertain" tags="" position="2545,1690">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="60" name="walk" tags="" position="2190,1700">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="dinner" tags="" position="2416,1693">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="62" name="sleep" tags="" position="2541,1553">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="63" name="breakfast_2" tags="" position="2536.666666666667,1420">&lt;&lt;set $whatToEat&gt;&gt;
+&lt;&lt;set $events = [0, 1, 2, 3, 4, 5, 6, 7]&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="chores" tags="" position="2315,1700">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="59" name="entertain" tags="" position="2545,1690">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="60" name="walk" tags="" position="2190,1700">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="dinner" tags="" position="2416,1693">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="62" name="sleep" tags="" position="2550.0002000000004,1550">You climb into bed and shut off the lights.
+
+&lt;&lt;if $stageOfLife == &quot;young&quot;&gt;&gt;
+&lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;
+&lt;&lt;if $energy &lt;= $maxEnergy * 0.25&gt;&gt;$name looks tired, with $poss ropy midsection wrapped around your curtain hanger. $csubj is not even smiling anymore. Rather, $subj looks relaxed, $poss eyes fluttering open and closed, the moon reflecting off of their obsidian surface...&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $energy &lt;= $maxEnergy * .50&gt;&gt; $csubj is lively still, slithering around your room, rustling over your carpet and between your furniture. $csub freezes in place when you shut off the light.
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&quot;[[Goodnight,|bedtime][$fury-=5]] $name&quot;, you whisper
+[[Go to sleep-&gt;bedtime]] </tw-passagedata><tw-passagedata pid="63" name="breakfast_2" tags="" position="2536,1420">&lt;&lt;set $whatToEat&gt;&gt;
 &lt;&lt;set $meal = &quot;breakfast&quot;&gt;&gt;
 What do you want to eat?
 [[Toast|Food][$whatToEat = &quot;toast&quot;]]
 [[Bacon|Food][$whatToEat = &quot;bacon&quot;]]
-[[Cereal|Food][$whatToEat = &quot;cereal&quot;]]</tw-passagedata><tw-passagedata pid="64" name="Food" tags="" position="2340,1353.3333333333335">&lt;&lt;if $whatToEat == &quot;toast&quot;&gt;&gt;
+[[Cereal|Food][$whatToEat = &quot;cereal&quot;]]</tw-passagedata><tw-passagedata pid="64" name="Food" tags="" position="2340,1353">&lt;&lt;if $whatToEat == &quot;toast&quot;&gt;&gt;
 You eat toast
 &lt;&lt;elseif $whatToEat == &quot;bacon&quot;&gt;&gt;
 You make some bacon. Do you want to save some for $name ?
@@ -547,17 +561,341 @@ You make some bacon. Do you want to save some for $name ?
 [[No]]
 &lt;&lt;elseif $whatToEat == &quot;cereal&quot;&gt;&gt;
 Cereal
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Yes" tags="" position="2243.3333333333335,1168.3333333333335">You put a strip of bacon in your pocket.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Yes" tags="" position="2243,1168">You put a strip of bacon in your pocket.
 &lt;&lt;addToInv &quot;meat&quot;&gt;&gt;
 (1 piece of &#x27;&#x27;meat&#x27;&#x27; added to your inventory)
 &lt;&lt;set $actions -= 1&gt;&gt;
 &lt;&lt;set $timeOfDay += 1&gt;&gt;
 [[Do something else?-&gt;wait]]
-[[Check-&gt;room]] on $name?</tw-passagedata><tw-passagedata pid="66" name="No" tags="" position="2435,1183.3333333333335">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="67" name="bedtime" tags="" position="1501.6666666666667,1406.6666666666667">//Dreams
-//Add to $day</tw-passagedata></tw-storydata>
+[[Check-&gt;room]] on $name?</tw-passagedata><tw-passagedata pid="66" name="No" tags="" position="2435,1183">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="67" name="bedtime" tags="" position="1500,1400">&lt;&lt;set $dreams_1 = [&quot;fire&quot;, &quot;darkness&quot;, &quot;light&quot;, &quot;faces&quot;, &quot;impressions&quot;,]&gt;&gt;
+&lt;&lt;if $day == 1&gt;&gt;
+&lt;&lt;set $tonightsDream_1 = $dreams_1.pluck()&gt;&gt;
+&lt;&lt;display $tonightsDream_1&gt;&gt;
+
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="fire" tags="" position="1350,1300">fire</tw-passagedata><tw-passagedata pid="69" name="darkness" tags="" position="1350,1600">darkness</tw-passagedata><tw-passagedata pid="70" name="light" tags="" position="1350,1500">light</tw-passagedata><tw-passagedata pid="71" name="faces" tags="" position="1350,1200">faces</tw-passagedata><tw-passagedata pid="72" name="impressions" tags="" position="1350,1400">impressions</tw-passagedata></tw-storydata>
+
+<tw-storydata name="Devilmother" startnode="1" creator="Twine" creator-version="2.0.8" ifid="07E1751C-94B1-447E-BBA4-451752C6DB17" format="SugarCube" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/************************************************************
+* BLEACHED - A largely white style for SugarCube (v1.0.17+) *
+************************************************************/
+body {
+	color: #000;
+	background-color: #fff;
+}
+a {
+	color: #24f;
+}
+a:hover {
+	color: #68f;
+}
+a:active {
+	color: #f70;
+}
+hr {
+	height: 1px;
+	border: none;
+	background-color: #000;
+}
+input, textarea {
+	color: #000;
+	background-color: #fff;
+	border-color: #ccc;
+}
+input:hover, input:focus, textarea:hover, textarea:focus {
+	background-color: #eee;
+	border-color: #000;
+}
+#ui-bar, #ui-body {
+	background-color: #eee;
+	border-color: #ccc;
+}
+#credits, #version {
+	color: #6f6f6f;
+}
+button, #ui-body-close,
+#ui-body.options a[id|="option-input"],
+#ui-body.options select[id|="option-input"] {
+	border-color: #36c;
+}
+button:hover, #ui-body-close:hover,
+#ui-body.options a[id|="option-input"]:hover {
+	border-color: #58e;
+}
+button:active, #ui-body-close:active {
+	border-color: #f70;
+}
+#ui-body.options a[id|="option-input"].enabled {
+	border-color: #292;
+}
+#ui-body.options a[id|="option-input"].enabled:hover {
+	border-color: #4b4;
+}
+#ui-body.dialog-list li:nth-child(even) {
+	background-color: rgba(0,0,0,0.07);
+}
+#ui-body.dialog-list li a {
+	color: #222;
+}
+#ui-body.dialog-list li a:hover {
+	color: #fff;
+	background-color: #47b;
+}
+#ui-body.dialog-list li a:active {
+	color: #fff;
+	background-color: #f70;
+}
+#ui-body.saves tr:nth-child(even) {
+	background-color: rgba(0,0,0,0.07);
+}
+#ui-body.saves .empty {
+	color: #444;
+}
+#ui-body.saves > div:not(:first-child) {
+	border-color: #ccc;
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">var hunger;
+var thirst;
+var fury;
+var energy;</script><tw-passagedata pid="1" name="Start" tags="" position="2095,226.66666666666669">You are in a room and a [[woman-&gt;mom_desc]] is standing across a table from you.
+
+You are [[cold-&gt;cold_room]]</tw-passagedata><tw-passagedata pid="2" name="mom_desc" tags="" position="1801.6666666666667,293.33333333333337">She has eyes that darken and throb in concert with the [[shadows-&gt;shadows_desc]] around you, punctuated with flecks of gold. 
+
+There is a [[glassy stone-&gt;egg_desc]] on the table.
+
+She slowly raises her non-eyes from the stone to you. Your eyes meet. It is like staring into a pit.
+
+Her face is blank, with the slightest hint of [[concern-&gt;part_2]]</tw-passagedata><tw-passagedata pid="3" name="cold_room" tags="" position="1900,156.66666666666669">The granite lining the room reflect a chill that cuts through you.
+
+The [[woman-&gt;mom_desc]] raises her head, as if motioning to [[speak -&gt; part_2]] </tw-passagedata><tw-passagedata pid="4" name="shadows_desc" tags="" position="2836,392">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="egg_desc" tags="" position="2544,284">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="part_2" tags="" position="2984,396">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name=" part_2" tags="" position="2991.666666666667,246.66666666666669">&quot;This is my child&quot;, she says, gesturing with her eyes towards the ethereal rock lying on the table. &quot;My Master needs me to prepare for the coming Epoch; I need you to watch....&quot;
+
+She trails off.
+
+You respond...
+[[your child&#x27;s a stone?-&gt;its_agender]]
+[[what&#x27;s her name? -&gt; its_a_girl]]
+[[he looks tired... -&gt; its_a_boy]]</tw-passagedata><tw-passagedata pid="8" name="its_agender" tags="" position="3204,164">&lt;&lt;set $gender to &quot;agender&quot;&gt;&gt;
+&lt;&lt;set $posessive to &quot;its&quot;&gt;&gt;
+&lt;&lt;set $obj to &quot;it&quot;&gt;&gt;
+&lt;&lt;set $subj to &quot;it&quot;&gt;&gt;
+&lt;&lt;set $self to &quot;itself&quot;&gt;&gt;
+&quot;For now. Not for long.&quot; She motions you closer.
+
+[[Move closer-&gt;move_closer]]
+[[Stay where you are-&gt;stay_put]]</tw-passagedata><tw-passagedata pid="9" name=" its_a_girl" tags="" position="3144,400">&lt;&lt;set $gender to &quot;female&quot;&gt;&gt;
+&lt;&lt;set $posessive to &quot;her&#x27;s&quot;&gt;&gt;
+&lt;&lt;set $obj to &quot;her&quot;&gt;&gt;
+&lt;&lt;set $subj to &quot;she&quot;&gt;&gt;
+&lt;&lt;set $self to &quot;herself&quot;&gt;&gt;
+&quot;I don&#x27;t know. What do [[you-&gt;give_name]] want to call $obj&quot;</tw-passagedata><tw-passagedata pid="10" name=" its_a_boy" tags="" position="2583.3333333333335,491.6666666666667">&lt;&lt;set $gender to &quot;male&quot;&gt;&gt;
+&lt;&lt;set $posessive to &quot;his&quot;&gt;&gt;
+&lt;&lt;set $obj to &quot;him&quot;&gt;&gt;
+&lt;&lt;set $subj to &quot;he&quot;&gt;&gt;
+&lt;&lt;set $self to &quot;himself&quot;&gt;&gt;
+
+&quot;$subj is sleeping. Do not wake $obj unless you are prepared for your sky to burn down.&quot;
+
+She set her gaze back on the cloudy black stone.
+
+[[Does $subj have a name?-&gt;boy_name]]
+[[Wait...what&#x27;s that about the sky?-&gt;ominousforeboding]]
+</tw-passagedata><tw-passagedata pid="11" name="move_closer" tags="" position="3396,232">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="stay_put" tags="" position="3384,84">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="give_name" tags="" position="3148,552">(set: $name to prompt())
+(display: &quot;conf_name&quot;)
+</tw-passagedata><tw-passagedata pid="14" name="conf_name" tags="" position="1960,400">&quot;(print:$name)...&quot;
+
+She runs it over and around her tongue, slowly.
+
+&quot;It&#x27;s lovely.&quot;
+
+The golden sparkle in her eyes briefly and subtly intensifies.
+
+&quot;Thank you, naming my child. And for everything that is yet to come.&quot;
+
+[[Your eyelids feel heavy as they slowly and deliberately close-&gt;day_1]]</tw-passagedata><tw-passagedata pid="15" name="boy_name" tags="" position="1928,560">&quot;No. Not yet. Why don&#x27;t [[you-&gt;give_name]] give $obj one&quot;</tw-passagedata><tw-passagedata pid="16" name="ominousforeboding" tags="" position="2731.666666666667,643.3333333333334">&quot;You will groom $obj. Teach $obj to kill. And then hope in the end that $subj allows you to suffer the least.&quot;
+
+There was no hint of malice in her voice.
+
+[[Oh, um, what should I call $obj?-&gt;boy_name_2]]
+[[Why would I ever do something like that? -&gt;why]]
+[[No I will not-&gt;refusal]]</tw-passagedata><tw-passagedata pid="17" name="boy_name_2" tags="" position="2076,708">&quot;Call him whatever [[you would-&gt;give_name]] like&quot;</tw-passagedata><tw-passagedata pid="18" name="why" tags="" position="2226.666666666667,706.6666666666667">&quot;Because I picked you to. That should be reason enough&quot;
+
+[[Why should I care what you want with my life? -&gt; shd_i_care]]
+[[It&#x27;s not. I don&#x27;t even know who you are. -&gt; not_reson_enf]]
+[[Why is $subj so important? -&gt;who_is_babby]]</tw-passagedata><tw-passagedata pid="19" name="refusal" tags="" position="2416,604">&quot;Are you certain? You are my last hope&quot;
+
+[[Absolutely-&gt;abs_refusal]]
+[[On second thought...-&gt;back_down]]</tw-passagedata><tw-passagedata pid="20" name="abs_refusal" tags="" position="3772,808">&quot;Very well, you will indeed suffer in the end.&quot;
+
+Your eyes feel heavy, as you fall asleep.
+
+[[Play again? -&gt; terminator]]</tw-passagedata><tw-passagedata pid="21" name="back_down" tags="" position="2251.666666666667,1025">&quot;Wonderful. I am sure you two will grow to be inseperable, even if you despise each other by the end&quot;
+
+[[What should I call $subj, then?-&gt;boy_name_2]] </tw-passagedata><tw-passagedata pid="22" name=" terminator" tags="" position="3772,956">(display:&quot;Start&quot;)</tw-passagedata><tw-passagedata pid="23" name=" shd_i_care" tags="" position="2904,1024">&quot;I have no obligation to answer you. But it is within my power to reduce your sentence.&quot;
+
+[[Sentence?-&gt;sentence]]
+[[I won&#x27;t do it-&gt;refusal]] 
+[[Well...tell me what I need to do-&gt;ready]]</tw-passagedata><tw-passagedata pid="24" name=" not_reson_enf" tags="" position="3520,888">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="who_is_babby" tags="" position="3388,888">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="sentence" tags="" position="3644,1112">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="ready" tags="" position="3504,1112">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="day_1" tags="" position="1780,480">&lt;&lt;set $day to 1&gt;&gt;
+You wake up in a bed you recognize, under a ceiling you know well.
+
+[[Get up-&gt;get_up]]
+[[Stay in bed a bit longer-&gt;stay_in_bed]]</tw-passagedata><tw-passagedata pid="29" name="get_up" tags="" position="1523.3333333333335,208.33333333333334">&lt;&lt;set $fury to 45&gt;&gt;
+&lt;&lt;set $energy to 50&gt;&gt;
+You fling your feet over the side of your bed, hoping the momentum will do what your enervated muscles cannot. 
+
+[[Stand up -&gt;room_preamble]]</tw-passagedata><tw-passagedata pid="30" name="stay_in_bed" tags="" position="1315,208.33333333333334">(set:$fury to 45)
+(set:$energy to 50)
+(set:$fury to $fury + 1)
+
+You lie there, for a bit. You feel uneasy. What a strange dream you had.
+
+[[Get up-&gt;get_up]] 
+[[Stay in bed some more -&gt; stay_in_bed_2]] </tw-passagedata><tw-passagedata pid="31" name=" stay_in_bed_2" tags="" position="1218.3333333333335,505">You&#x27;re uncomfortable. You start to feel sick in a way that you are not accustomed to. It feels like a nausea rooted in your muscles.
+
+[[Wait it out-&gt;sit_in_bed]]
+[[Get up-&gt;get_up]] </tw-passagedata><tw-passagedata pid="32" name="room_preamble" tags="" position="1408.3333333333335,768.3333333333334">You briefly look around your room. It&#x27;s a slight mess, but not too unsightly.
+&lt;&lt;if visited(&quot;brush_teeth&quot;) is 0&gt;&gt;[[Go to brush your teeth-&gt;brush_teeth]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if visited(&quot;shower&quot;) is 0&gt;&gt;[[Take a shower-&gt;shower]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if visited(&quot;dressed&quot;) is 0&gt;&gt;[[Get dressed-&gt;dressed]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if visited(&quot;coffee&quot;) is 0&gt;&gt;[[Make coffee-&gt;coffee]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="sit_in_bed" tags="" position="2488,956">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="34" name="brush_teeth" tags="" position="2200,581.6666666666667">You put tooth paste on your bristles and &lt;&lt;if visited(&quot;coffee&quot;) is 1&gt;&gt; brush hard to try to get the taste of grit and filth out of your mouth&lt;&lt;else&gt;&gt;brush&lt;&lt;/if&gt;&gt;.
+
+&lt;&lt;if visited(&quot;breakfast&quot;) is 1&gt;&gt;You spit blood into your sink.
+&lt;&lt;else&gt;&gt;Your teeth feel brittle
+[[Go shower-&gt;shower]]
+[[Eat breakfast-&gt;breakfast]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="dressed" tags="" position="1595,797">&lt;&lt;if visited(&quot;shower&quot;) is 1&gt;&gt;
+You grab your clothes from the rack and hastily put them on. Your shirt feels like needles.
+
+[[Check medicine cabinet-&gt;medicine]]
+[[Eat something-&gt;breakfast]]
+&lt;&lt;else&gt;&gt;You get clean clothes from the closet. The fabric feels itchy and 	abrasive
+[[Continue-&gt;notice_stone]] 
+&lt;&lt;/if&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="36" name="coffee" tags="" position="1545,471.6666666666667">You grind beans until you can smell the polymer stench from your grinder&#x27;s electric motor wearing thin; you heat water until it&#x27;s just about to boil; you drizzle the water onto the grounds, laying in a filter until the brew begins to leak through.
+
+It tastes like ash.
+
+[[Return to your room-&gt;room_preamble]] </tw-passagedata><tw-passagedata pid="37" name="shower" tags="" position="2348,440">&lt;&lt;if visited(&quot;dressed&quot;) is 0&gt;&gt;You take off your pajamas, set your clean clothes on your towel rack, and turn on the water. It feels unreasonably cold. You try turning the heat up but there is no change. You might be getting sick.
+
+
+[[Get dressed-&gt;dressed]]
+
+	&lt;&lt;else&gt;&gt;You walk into your bathroom; you would like to shower but you just put on your clothes. You can do it later
+
+[[Return to room-&gt;notice_stone]]
+&lt;&lt;/if&gt;&gt;
+
+
+
+
+</tw-passagedata><tw-passagedata pid="38" name="notice_stone" tags="" position="1718.3333333333335,953.3333333333334">&lt;&lt;set $hunger&gt;&gt;
+&lt;&lt;set $poop&gt;&gt;
+&lt;&lt;set $fatigue&gt;&gt;
+
+&lt;&lt;set $brutality&gt;&gt;
+&lt;&lt;set $guile&gt;&gt;
+&lt;&lt;set $malice&gt;&gt;
+
+&lt;&lt;set $type&gt;&gt;
+
+
+You feel dizzy, on your back, on your bed.
+
+You prop yourself up, and then you notice it.
+
+By your windowsill.
+
+A smooth and black opalescent stone.
+
+[[Get closer-&gt;stone_closer]]
+[[Stay put-&gt;stay_stone]]</tw-passagedata><tw-passagedata pid="39" name="medicine" tags="" position="1450,1000">You look through your medicine cabinet looking for something, anything that will make you feel normal again.
+
+Nothing jumps out at you, most probably because you cannot articulate your symptoms.
+
+[[Take some painkillers-&gt;pills]]
+[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="40" name="breakfast" tags="" position="1660,672">You pour youself a bowl of cereal, dry. You take a bite, and almost reflexively spit it back out. 
+
+You taste blood in your mouth, but cannot find a cut.
+
+[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="41" name="pills" tags="" position="1535,601.6666666666667">You pop a few pills into your mouth and choke them down. Your tongue feels like sharkskin
+[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="42" name="stone_closer" tags="" position="1718.3333333333335,1100">You inch closer to the stone.
+
+It looks like obsidian glass with a membrane of cloudy neon film undulating beneath its surface. Like a droplet of liquid nebula.
+
+It&#x27;s mesmerizing.
+
+The orb&#x27;s undercurrent throbs, only held spherical by a clear skin that looks like it could rupture at any moment.
+
+It rapidly and violently contorts and twists in on itself
+
+[[It looks like it&#x27;s slithering-&gt;snek]]
+[[It looks like it&#x27;s flying-&gt;bat]]
+[[It looks like it&#x27;s swimming-&gt;squid]]
+</tw-passagedata><tw-passagedata pid="43" name="stay_stone" tags="" position="1871.6666666666667,958.3333333333334">You stay back, and look at it from a distance.
+
+The stone is transluscent, and is glowing with a sometimes soft and sometimes razor-like light.
+
+[[Wait on your bed-&gt;random_class]]</tw-passagedata><tw-passagedata pid="44" name="snek" tags="" position="1716,1248">&lt;&lt;set $type = &quot;Deciever&quot;&gt;&gt;
+&lt;&lt;set $brutality = random(1, 3)&gt;&gt;
+&lt;&lt;set $guile = random(3, 5)&gt;&gt;
+&lt;&lt;set $malice = random(2, 4)&gt;&gt;
+&lt;&lt;set $characteristics = [&quot;Cold&quot;, &quot;Manipulative&quot;, &quot;Liar&quot;]&gt;&gt;
+&lt;&lt;set $abilities = [&quot;Hypnotize&quot;]&gt;&gt;
+
+The cloud forms rings of dust that elongate and contract, never quite touching. The mass moves and disperses with a rhythmic quality that&#x27;s hard to look at but harder to look away from.
+
+It curls around itself, consuming itself, becoming a ball and then reforming into a narrow wriggling and incorporeal worm.
+
+The skin of the stone ruptures and the blackness evaporated as if it were the night at sunrise.
+
+And sitting there in a puddle of viscous fluid was.....[[something-&gt;room]]</tw-passagedata><tw-passagedata pid="45" name="bat" tags="" position="1868.3333333333335,1251.6666666666667">&lt;&lt;set $type = &quot;Infernal&quot;&gt;&gt;
+&lt;&lt;set $brutality = random(5, 7)&gt;&gt;
+&lt;&lt;set $guile = random(1, 3)&gt;&gt;
+&lt;&lt;set $malice = random(1, 5)&gt;&gt;
+&lt;&lt;set $characteristics = [&quot;Furious&quot;, &quot;Ironhide&quot;, &quot;Imposing&quot;]&gt;&gt;
+&lt;&lt;set $abilities = [&quot;Fly&quot;]&gt;&gt;
+
+The lobes of the cloud expand and beat down repeatedly but erratically. They look like wings until they collapse together, forming a new body. 
+
+It spirals around, and then reforms again; its lobes pressing against the transluscent sphere&#x27;s outer skin. They make no impression, and are dispersed.
+
+Each lobe, 5 you count now, presses on the skin in unison and it bursts. The black burns away as a shadow in a spotlight would.
+
+Laying there, curled up on your windowsill, there was.....[[something-&gt;room]] </tw-passagedata><tw-passagedata pid="46" name="squid" tags="" position="1560,1248.3333333333335">&lt;&lt;set $type = &quot;Corruptor&quot;&gt;&gt;
+&lt;&lt;set $brutality = random(1, 2)&gt;&gt;
+&lt;&lt;set $guile = random(1, 3)&gt;&gt;
+&lt;&lt;set $malice = random(6, 8)&gt;&gt;
+&lt;&lt;set $characteristics = [&quot;Sinister&quot;, &quot;Discontented&quot;, &quot;Obscene&quot;]&gt;&gt;
+&lt;&lt;set $abilities = [&quot;Putrify&quot;]&gt;&gt;
+
+The colloidal particles, suspended in the blackest of syrupy liquid floated and dispersed, like pollen the ocean, before quickly congealing into a central mass with wriggling and flailing spokes spiraling off of it.
+
+It faded, became particulate, and solidified again. Veins of iridescent light cascaded through each spoke until it was only light; the light was resubsumed by the shadow.
+
+It was now that you noticed amidst the lightshow that the black backdrop itself was seething and contorting growing slightly larger and tinting the cloud with an uncomfortable darkness. Each particle it touched became glass and settled on top of its crystalline shell. The black core wrapped around its own membrane, as it pulsed and grew and was out in a splash of fluid and glass.
+
+Laying there right on your windowsill...was [[something-&gt;room]]</tw-passagedata><tw-passagedata pid="47" name="room" tags="" position="1716,1400">&lt;&lt;if $day == 1&gt;&gt;
+&lt;&lt;if visited(&quot;room&quot;) == 1&gt;&gt;
+&lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;$subj is cute, if a little sinister, with eyes like oil and skin that looks wet but scaly. And then $subj smiles a devious, horrid, otherworldly smile.
+&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;$subj looks awfully sturdy, for a newbord, with half formed redbrown wings and bony growths which almost resemble armor. $subj pulls $self up onto $possessive two clawed feet
+&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;$subj is a gelatenous, half-etheral mass that is dripping tentacles that almost look like ink. But the eye, that one large oscillating eye. $subj knows you.
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+the room is cool
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $day == 2&gt;&gt;
+//Day 2 stuff
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="48" name="random_class" tags="" position="1870,1126.6666666666667">&lt;&lt;set $randInt = random(2)&gt;&gt;
+&lt;&lt;if $randInt == 0&gt;&gt; &lt;&lt;display &quot;squid&quot;&gt;&gt;
+&lt;&lt;elseif $randInt == 1&gt;&gt;&lt;&lt;display &quot;bat&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;display &quot;snek&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata></tw-storydata>
 
 <tw-storydata name="Spoop" startnode="" creator="Twine" creator-version="2.0.8" ifid="40E4E4C7-6E1E-4339-B34E-62227BAB6553" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 </script></tw-storydata>
 
