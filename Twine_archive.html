@@ -1,4 +1,16 @@
-<tw-storydata name="Devilmother" startnode="1" creator="Twine" creator-version="2.0.10" ifid="07E1751C-94B1-447E-BBA4-451752C6DB17" format="SugarCube" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+<tw-storydata name="Devilmother" startnode="136" creator="Twine" creator-version="2.0.8" ifid="07E1751C-94B1-447E-BBA4-451752C6DB17" format="SugarCube" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.passage .content h1{
+	text-align:center;
+}
+.passage .content h4{
+	text-align:center;
+}
+.passage .content p{
+	text-align: center;	
+}
+#ui-bar a{
+	color: #FF0000;
+}
+body {
   margin: 0;
   padding: 0;
   height:100%;
@@ -28,9 +40,20 @@
   border-radius: 1em;
   padding: 1em;
 }
+.passage a{
+	color: #ff0000;
+}
+.passage a:hover{
+	color: #801515;
+	text-decoration: none;
+}
+.passage a:active{
+	color: #550000;	
+	text-decoration:none;
+}
 a.internalLink, a.externalLink {
   border-bottom: solid #fff 1px;
-  color:#eee;
+  color:#fff;
   font-weight:normal;
 }
 a.internalLink:hover, a.externalLink:hover {
@@ -56,6 +79,8 @@ a.internalLink:active, a.externalLink:active {
   width: 95%;
   }
 }
+
+
 
 
 
@@ -166,36 +191,37 @@ macros.emptyInv = {
 
 
 
-</script><tw-passagedata pid="1" name="Start" tags="" position="2172,188">&lt;&lt;initInv&gt;&gt;
+
+
+</script><tw-passagedata pid="1" name="Start" tags="" position="2171,185">&lt;&lt;initInv&gt;&gt;
 &lt;&lt;set $schoolBrokenInto to false&gt;&gt;
 &lt;&lt;set $computersAreStolen to false&gt;&gt;
+&lt;&lt;set $guardIsIncapacitated to false&gt;&gt;
+&lt;&lt;set $policeIncidents to 0&gt;&gt;
+&lt;&lt;set $timeOfDay = 1&gt;&gt;
+&lt;&lt;set $stageOfLife = 1&gt;&gt;
+&lt;&lt;set $rumorsOfGhosts = 0&gt;&gt;
 
 You are in a room and a [[woman-&gt;mom_desc]] is standing across a table from you.
 
 You are [[cold-&gt;cold_room]]
-</tw-passagedata>
-<tw-passagedata pid="2" name="mom_desc" tags="" position="1801,293">She has eyes that darken and throb in concert with the [[shadows-&gt;shadows_desc]] around you, punctuated with flecks of gold. 
+</tw-passagedata><tw-passagedata pid="2" name="mom_desc" tags="" position="1801,293">She has eyes that darken and throb in concert with the [[shadows-&gt;shadows_desc]] around you, punctuated with flecks of gold. 
 
 There is a [[glassy stone-&gt;egg_desc]] on the table.
 
 She slowly raises her non-eyes from the stone to you. Your eyes meet. It is like staring into a pit.
 
-Her face is blank, with the slightest hint of [[concern-&gt;part_2]]</tw-passagedata>
-<tw-passagedata pid="3" name="cold_room" tags="" position="1900,152">
+Her face is blank, with the slightest hint of [[concern-&gt;part_2]]</tw-passagedata><tw-passagedata pid="3" name="cold_room" tags="" position="1900,152">
 The granite lining the room reflect a chill that cuts through you.
 
-The [[woman-&gt;mom_desc]] raises her head, as if motioning to [[speak -&gt;part_2]] </tw-passagedata>
-<tw-passagedata pid="4" name="shadows_desc" tags="" position="2556,159">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="5" name="egg_desc" tags="" position="2544,284">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="6" name="part_2" tags="" position="2700,0">&quot;This is my child&quot;, she says, gesturing with her eyes towards the ethereal rock lying on the table. &quot;My Master needs me to prepare for the coming Epoch; I need you to watch....&quot;
+The [[woman-&gt;mom_desc]] raises her head, as if motioning to [[speak -&gt;part_2]] </tw-passagedata><tw-passagedata pid="4" name="shadows_desc" tags="" position="2556,159">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="egg_desc" tags="" position="2544,284">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="part_2" tags="" position="2700,0">&quot;This is my child&quot;, she says, gesturing with her eyes towards the ethereal rock lying on the table. &quot;My Master needs me to prepare for the coming Epoch; I need you to watch....&quot;
 
 She trails off.
 
 You respond...
-[[your child&#39;s a stone?-&gt;its_agender]]
-[[what&#39;s her name? -&gt;its_a_girl]]
-[[he looks tired... -&gt;its_a_boy]]</tw-passagedata>
-<tw-passagedata pid="7" name="its_agender" tags="" position="2920,0">&lt;&lt;set $gender to &quot;agender&quot;&gt;&gt;
+[[your child&#x27;s a stone?-&gt;its_agender]]
+[[what&#x27;s her name? -&gt;its_a_girl]]
+[[he looks tired... -&gt;its_a_boy]]</tw-passagedata><tw-passagedata pid="7" name="its_agender" tags="" position="2920,0">&lt;&lt;set $gender to &quot;agender&quot;&gt;&gt;
 &lt;&lt;set $poss to &quot;its&quot;&gt;&gt;
 &lt;&lt;set $cposs to &quot;Its&quot;&gt;&gt;
 &lt;&lt;set $obj to &quot;it&quot;&gt;&gt;
@@ -207,8 +233,7 @@ You respond...
 &quot;For now. Not for long.&quot; She motions you closer.
 
 [[Move closer-&gt;move_closer]]
-[[Stay where you are-&gt;stay_put]]</tw-passagedata>
-<tw-passagedata pid="8" name="its_a_girl" tags="" position="2850,150">&lt;&lt;set $gender to &quot;female&quot;&gt;&gt;
+[[Stay where you are-&gt;stay_put]]</tw-passagedata><tw-passagedata pid="8" name="its_a_girl" tags="" position="2850,150">&lt;&lt;set $gender to &quot;female&quot;&gt;&gt;
 &lt;&lt;set $poss to &quot;her&quot;&gt;&gt;
 &lt;&lt;set $cposs to &quot;Her&quot;&gt;&gt;
 &lt;&lt;set $possS to &quot;hers&quot;&gt;&gt;
@@ -219,8 +244,7 @@ You respond...
 &lt;&lt;set $csubj to &quot;She&quot;&gt;&gt;
 &lt;&lt;set $self to &quot;herself&quot;&gt;&gt;
 &lt;&lt;set $cself to &quot;Herself&quot;&gt;&gt;
-&quot;I don&#39;t know. What do [[you-&gt;give_name]] want to call $obj&quot;</tw-passagedata>
-<tw-passagedata pid="9" name="its_a_boy" tags="" position="2581,490">&lt;&lt;set $gender to &quot;male&quot;&gt;&gt;
+&quot;I don&#x27;t know. What do [[you-&gt;give_name]] want to call $obj&quot;</tw-passagedata><tw-passagedata pid="9" name="its_a_boy" tags="" position="2581,490">&lt;&lt;set $gender to &quot;male&quot;&gt;&gt;
 &lt;&lt;set $poss to &quot;his&quot;&gt;&gt;
 &lt;&lt;set $cposs to &quot;His&quot;&gt;&gt;
 &lt;&lt;set $obj to &quot;him&quot;&gt;&gt;
@@ -235,68 +259,49 @@ You respond...
 She set her gaze back on the cloudy black stone.
 
 Does $subj [[have a name?-&gt;boy_name]]
-[[Wait...what&#39;s that about the sky?-&gt;ominousforeboding]]
-</tw-passagedata>
-<tw-passagedata pid="10" name="move_closer" tags="" position="3116,0">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="11" name="stay_put" tags="" position="3086,148">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="12" name="give_name" tags="" position="2703,326">&lt;&lt;set $name to prompt(&quot;I think...&quot;)&gt;&gt;
+[[Wait...what&#x27;s that about the sky?-&gt;ominousforeboding]]
+</tw-passagedata><tw-passagedata pid="10" name="move_closer" tags="" position="3116,0">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="stay_put" tags="" position="3086,148">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="give_name" tags="" position="2703,326">&lt;&lt;set $name to prompt(&quot;I think...&quot;)&gt;&gt;
 &lt;&lt;display &quot;conf_name&quot;&gt;&gt;
-</tw-passagedata>
-<tw-passagedata pid="13" name="conf_name" tags="" position="1932,475">&quot;$name...&quot;
+</tw-passagedata><tw-passagedata pid="13" name="conf_name" tags="" position="1932,475">&quot;$name...&quot;
 
 She runs it over and around her tongue, slowly.
 
-&quot;It&#39;s lovely.&quot;
+&quot;It&#x27;s lovely.&quot;
 
 The golden sparkle in her eyes briefly and subtly intensifies.
 
 &quot;Thank you, naming my child. And for everything that is yet to come.&quot;
 
-[[Your eyelids feel heavy as they slowly and deliberately close-&gt;day_1]]</tw-passagedata>
-<tw-passagedata pid="14" name="boy_name" tags="" position="1928,560">&quot;No. Not yet. Why don&#39;t [[you-&gt;give_name]] give $obj one&quot;</tw-passagedata>
-<tw-passagedata pid="15" name="ominousforeboding" tags="" position="2448,409">&quot;You will groom $obj. Teach $obj to kill. And then hope in the end that $subj allows you to suffer the least.&quot;
+[[Your eyelids feel heavy as they slowly and deliberately close-&gt;day_1]]</tw-passagedata><tw-passagedata pid="14" name="boy_name" tags="" position="1928,560">&quot;No. Not yet. Why don&#x27;t [[you-&gt;give_name]] give $obj one&quot;</tw-passagedata><tw-passagedata pid="15" name="ominousforeboding" tags="" position="2448,409">&quot;You will groom $obj. Teach $obj to kill. And then hope in the end that $subj allows you to suffer the least.&quot;
 
 There was no hint of malice in her voice.
 
 [[Oh, um, what should I call $obj?-&gt;boy_name_2]]
 [[Why would I ever do something like that? -&gt;why]]
-[[No I will not-&gt;refusal]]</tw-passagedata>
-<tw-passagedata pid="16" name="boy_name_2" tags="" position="2083,723">&quot;Call him whatever [[you would-&gt;give_name]] like&quot;</tw-passagedata>
-<tw-passagedata pid="17" name="why" tags="" position="2200,700">&quot;Because I picked you to. That should be reason enough&quot;
+[[No I will not-&gt;refusal]]</tw-passagedata><tw-passagedata pid="16" name="boy_name_2" tags="" position="2083,723">&quot;Call him whatever [[you would-&gt;give_name]] like&quot;</tw-passagedata><tw-passagedata pid="17" name="why" tags="" position="2200,700">&quot;Because I picked you to. That should be reason enough&quot;
 
 [[Why should I care what you want with my life? -&gt; shd_i_care]]
-[[It&#39;s not. I don&#39;t even know who you are. -&gt; not_reson_enf]]
-[[Why is $subj so important? -&gt;who_is_babby]]</tw-passagedata>
-<tw-passagedata pid="18" name="refusal" tags="" position="2416,604">&quot;Are you certain? You are my last hope&quot;
+[[It&#x27;s not. I don&#x27;t even know who you are. -&gt; not_reson_enf]]
+[[Why is $subj so important? -&gt;who_is_babby]]</tw-passagedata><tw-passagedata pid="18" name="refusal" tags="" position="2416,604">&quot;Are you certain? You are my last hope&quot;
 
 [[Absolutely-&gt;abs_refusal]]
-[[On second thought...-&gt;back_down]]</tw-passagedata>
-<tw-passagedata pid="19" name="abs_refusal" tags="" position="3085,531">&quot;Very well, you will indeed suffer in the end.&quot;
+[[On second thought...-&gt;back_down]]</tw-passagedata><tw-passagedata pid="19" name="abs_refusal" tags="" position="3085,531">&quot;Very well, you will indeed suffer in the end.&quot;
 
 Your eyes feel heavy, as you fall asleep.
 
-[[Play again? -&gt; terminator]]</tw-passagedata>
-<tw-passagedata pid="20" name="back_down" tags="" position="2251,1025">&quot;Wonderful. I am sure you two will grow to be inseperable, even if you despise each other by the end&quot;
+[[Play again? -&gt; terminator]]</tw-passagedata><tw-passagedata pid="20" name="back_down" tags="" position="2251,1025">&quot;Wonderful. I am sure you two will grow to be inseperable, even if you despise each other by the end&quot;
 
-[[What should I call $subj, then?-&gt;boy_name_2]] </tw-passagedata>
-<tw-passagedata pid="21" name=" terminator" tags="" position="3085,680">(display:&quot;Start&quot;)</tw-passagedata>
-<tw-passagedata pid="22" name=" shd_i_care" tags="" position="2624,792">&quot;I have no obligation to answer you. But it is within my power to reduce your sentence.&quot;
+[[What should I call $subj, then?-&gt;boy_name_2]] </tw-passagedata><tw-passagedata pid="21" name=" terminator" tags="" position="3085,680">(display:&quot;Start&quot;)</tw-passagedata><tw-passagedata pid="22" name=" shd_i_care" tags="" position="2624,792">&quot;I have no obligation to answer you. But it is within my power to reduce your sentence.&quot;
 
 [[Sentence?-&gt;sentence]]
-[[I won&#39;t do it-&gt;refusal]] 
-[[Well...tell me what I need to do-&gt;ready]]</tw-passagedata>
-<tw-passagedata pid="23" name=" not_reson_enf" tags="" position="2833,611">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="24" name="who_is_babby" tags="" position="2633,667">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="25" name="sentence" tags="" position="2956,836">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="26" name="ready" tags="" position="2816,836">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="27" name="day_1" tags="" position="1780,480">&lt;&lt;set $day to 1&gt;&gt;
+[[I won&#x27;t do it-&gt;refusal]] 
+[[Well...tell me what I need to do-&gt;ready]]</tw-passagedata><tw-passagedata pid="23" name=" not_reson_enf" tags="" position="2833,611">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="who_is_babby" tags="" position="2633,667">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="sentence" tags="" position="2956,836">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="ready" tags="" position="2816,836">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="day_1" tags="" position="1780,480">&lt;&lt;set $day to 1&gt;&gt;
 &lt;&lt;set $actions to 5&gt;&gt;
 &lt;&lt;set $inv to []&gt;&gt;
 You wake up in a bed you recognize, under a ceiling you know well.
 
 [[Get up-&gt;get_up]]
-[[Stay in bed a bit longer-&gt;stay_in_bed]]</tw-passagedata>
-<tw-passagedata pid="28" name="get_up" tags="" position="1516,208">&lt;&lt;set $fury to 45&gt;&gt;
+[[Stay in bed a bit longer-&gt;stay_in_bed]]</tw-passagedata><tw-passagedata pid="28" name="get_up" tags="" position="1516,208">&lt;&lt;set $fury to 45&gt;&gt;
 &lt;&lt;set $energy to 50&gt;&gt;
 &lt;&lt;set $friendship to 0&gt;&gt;
 &lt;&lt;set $maxFriendship to 50&gt;&gt;
@@ -304,8 +309,7 @@ You wake up in a bed you recognize, under a ceiling you know well.
 &lt;&lt;set $maxEnergy to 100&gt;&gt;
 You fling your feet over the side of your bed, hoping the momentum will do what your enervated muscles cannot. 
 
-[[Stand up -&gt;room_preamble]]</tw-passagedata>
-<tw-passagedata pid="29" name="stay_in_bed" tags="" position="1312,208">&lt;&lt;set $fury to 45&gt;&gt;
+[[Stand up -&gt;room_preamble]]</tw-passagedata><tw-passagedata pid="29" name="stay_in_bed" tags="" position="1312,208">&lt;&lt;set $fury to 45&gt;&gt;
 &lt;&lt;set $energy to 50&gt;&gt;
 &lt;&lt;set $friendship to 0&gt;&gt;
 &lt;&lt;set $maxFriendship to 50&gt;&gt;
@@ -316,25 +320,20 @@ You fling your feet over the side of your bed, hoping the momentum will do what 
 You lie there, for a bit. You feel uneasy. What a strange dream you had.
 
 [[Get up-&gt;get_up]] 
-[[Stay in bed some more -&gt; stay_in_bed_2]] </tw-passagedata>
-<tw-passagedata pid="30" name=" stay_in_bed_2" tags="" position="1218,505">You&#39;re uncomfortable. You start to feel sick in a way that you are not accustomed to. It feels like a nausea rooted in your muscles.
+[[Stay in bed some more -&gt; stay_in_bed_2]] </tw-passagedata><tw-passagedata pid="30" name=" stay_in_bed_2" tags="" position="1218,505">You&#x27;re uncomfortable. You start to feel sick in a way that you are not accustomed to. It feels like a nausea rooted in your muscles.
 
 [[Wait it out-&gt;sit_in_bed]]
-[[Get up-&gt;get_up]] </tw-passagedata>
-<tw-passagedata pid="31" name="room_preamble" tags="" position="1408,768">You briefly look around your room. It&#39;s a slight mess, but not too unsightly.
+[[Get up-&gt;get_up]] </tw-passagedata><tw-passagedata pid="31" name="room_preamble" tags="" position="1408,768">You briefly look around your room. It&#x27;s a slight mess, but not too unsightly.
 &lt;&lt;if visited(&quot;brush_teeth&quot;) is 0&gt;&gt;[[Go to brush your teeth-&gt;brush_teeth]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if visited(&quot;shower&quot;) is 0&gt;&gt;[[Take a shower-&gt;shower]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if visited(&quot;dressed&quot;) is 0&gt;&gt;[[Get dressed-&gt;dressed]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if visited(&quot;coffee&quot;) is 0&gt;&gt;[[Make coffee-&gt;coffee]]&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="32" name="sit_in_bed" tags="" position="2488,956">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="33" name="brush_teeth" tags="" position="2200,581">You put tooth paste on your bristles and &lt;&lt;if visited(&quot;coffee&quot;) is 1&gt;&gt; brush hard to try to get the taste of grit and filth out of your mouth&lt;&lt;else&gt;&gt;brush&lt;&lt;/if&gt;&gt;.
+&lt;&lt;if visited(&quot;coffee&quot;) is 0&gt;&gt;[[Make coffee-&gt;coffee]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="sit_in_bed" tags="" position="2488,956">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="brush_teeth" tags="" position="2200,581">You put tooth paste on your bristles and &lt;&lt;if visited(&quot;coffee&quot;) is 1&gt;&gt; brush hard to try to get the taste of grit and filth out of your mouth&lt;&lt;else&gt;&gt;brush&lt;&lt;/if&gt;&gt;.
 
 &lt;&lt;if visited(&quot;breakfast&quot;) is 1&gt;&gt;You spit blood into your sink.
 &lt;&lt;else&gt;&gt;Your teeth feel brittle
 [[Go shower-&gt;shower]]
 [[Eat breakfast-&gt;breakfast]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="34" name="dressed" tags="" position="1595,797">&lt;&lt;if visited(&quot;shower&quot;) is 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="dressed" tags="" position="1595,797">&lt;&lt;if visited(&quot;shower&quot;) is 1&gt;&gt;
 You grab your clothes from the rack and hastily put them on. Your shirt feels like needles.
 
 [[Check medicine cabinet-&gt;medicine]]
@@ -343,13 +342,11 @@ You grab your clothes from the rack and hastily put them on. Your shirt feels li
 [[Continue-&gt;notice_stone]] 
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata>
-<tw-passagedata pid="35" name="coffee" tags="" position="1545,471">You grind beans until you can smell the polymer stench from your grinder&#39;s electric motor wearing thin; you heat water until it&#39;s just about to boil; you drizzle the water onto the grounds, laying in a filter until the brew begins to leak through.
+</tw-passagedata><tw-passagedata pid="35" name="coffee" tags="" position="1545,471">You grind beans until you can smell the polymer stench from your grinder&#x27;s electric motor wearing thin; you heat water until it&#x27;s just about to boil; you drizzle the water onto the grounds, laying in a filter until the brew begins to leak through.
 
 It tastes like ash.
 
-[[Return to your room-&gt;room_preamble]] </tw-passagedata>
-<tw-passagedata pid="36" name="shower" tags="" position="2232,432">&lt;&lt;if visited(&quot;dressed&quot;) is 0&gt;&gt;You take off your pajamas, set your clean clothes on your towel rack, and turn on the water. It feels unreasonably cold. You try turning the heat up but there is no change. You might be getting sick.
+[[Return to your room-&gt;room_preamble]] </tw-passagedata><tw-passagedata pid="36" name="shower" tags="" position="2232,432">&lt;&lt;if visited(&quot;dressed&quot;) is 0&gt;&gt;You take off your pajamas, set your clean clothes on your towel rack, and turn on the water. It feels unreasonably cold. You try turning the heat up but there is no change. You might be getting sick.
 
 
 [[Get dressed-&gt;dressed]]
@@ -362,8 +359,7 @@ It tastes like ash.
 
 
 
-</tw-passagedata>
-<tw-passagedata pid="37" name="notice_stone" tags="" position="1718,953">&lt;&lt;set $hunger&gt;&gt;
+</tw-passagedata><tw-passagedata pid="37" name="notice_stone" tags="" position="1718,953">&lt;&lt;set $hunger&gt;&gt;
 &lt;&lt;set $poop&gt;&gt;
 &lt;&lt;set $fatigue&gt;&gt;
 
@@ -383,56 +379,49 @@ By your windowsill.
 A smooth and black opalescent stone.
 
 [[Get closer-&gt;stone_closer]]
-[[Stay put-&gt;stay_stone]]</tw-passagedata>
-<tw-passagedata pid="38" name="medicine" tags="" position="1450,1000">You look through your medicine cabinet looking for something, anything that will make you feel normal again.
+[[Stay put-&gt;stay_stone]]</tw-passagedata><tw-passagedata pid="38" name="medicine" tags="" position="1450,1000">You look through your medicine cabinet looking for something, anything that will make you feel normal again.
 
 Nothing jumps out at you, most probably because you cannot articulate your symptoms.
 
 [[Take some painkillers-&gt;pills]]
-[[Return to room-&gt;notice_stone]] </tw-passagedata>
-<tw-passagedata pid="39" name="breakfast" tags="" position="1785,781">You pour youself a bowl of cereal, dry. You take a bite, and almost reflexively spit it back out. 
+[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="39" name="breakfast" tags="" position="1785,781">You pour youself a bowl of cereal, dry. You take a bite, and almost reflexively spit it back out. 
 
 You taste blood in your mouth, but cannot find a cut.
 
 [[Return to room-&gt;notice_stone]]
 
-</tw-passagedata>
-<tw-passagedata pid="40" name="pills" tags="" position="1535,601">You pop a few pills into your mouth and choke them down. Your tongue feels like sharkskin
-[[Return to room-&gt;notice_stone]] </tw-passagedata>
-<tw-passagedata pid="41" name="stone_closer" tags="" position="1716,1100">You inch closer to the stone.
+</tw-passagedata><tw-passagedata pid="40" name="pills" tags="" position="1535,601">You pop a few pills into your mouth and choke them down. Your tongue feels like sharkskin
+[[Return to room-&gt;notice_stone]] </tw-passagedata><tw-passagedata pid="41" name="stone_closer" tags="" position="1716,1100">You inch closer to the stone.
 
 It looks like obsidian glass with a membrane of cloudy neon film undulating beneath its surface. Like a droplet of liquid nebula.
 
-It&#39;s mesmerizing.
+It&#x27;s mesmerizing.
 
-The orb&#39;s undercurrent throbs, only held spherical by a clear skin that looks like it could rupture at any moment.
+The orb&#x27;s undercurrent throbs, only held spherical by a clear skin that looks like it could rupture at any moment.
 
 It rapidly and violently contorts and twists in on itself
 
-[[It looks like it&#39;s slithering-&gt;snek]]
-[[It looks like it&#39;s flying-&gt;bat]]
-[[It looks like it&#39;s swimming-&gt;squid]]
-</tw-passagedata>
-<tw-passagedata pid="42" name="stay_stone" tags="" position="1871,958">You stay back, and look at it from a distance.
+[[It looks like it&#x27;s slithering-&gt;snek]]
+[[It looks like it&#x27;s flying-&gt;bat]]
+[[It looks like it&#x27;s swimming-&gt;squid]]
+</tw-passagedata><tw-passagedata pid="42" name="stay_stone" tags="" position="1871,958">You stay back, and look at it from a distance.
 
 The stone is transluscent, and is glowing with a sometimes soft and sometimes razor-like light.
 
-[[Wait on your bed-&gt;random_class]]</tw-passagedata>
-<tw-passagedata pid="43" name="snek" tags="" position="1715,1248.3333333333335">&lt;&lt;set $type = &quot;Deciever&quot;&gt;&gt;
+[[Wait on your bed-&gt;random_class]]</tw-passagedata><tw-passagedata pid="43" name="snek" tags="" position="1715,1248">&lt;&lt;set $type = &quot;Deciever&quot;&gt;&gt;
 &lt;&lt;set $brutality = random(1, 3)&gt;&gt;
 &lt;&lt;set $guile = random(3, 5)&gt;&gt;
 &lt;&lt;set $malice = random(2, 4)&gt;&gt;
 &lt;&lt;set $characteristics = [&quot;Cold&quot;, &quot;Manipulative&quot;, &quot;Liar&quot;]&gt;&gt;
 &lt;&lt;set $abilities = [&quot;Hypnotize&quot;]&gt;&gt;
 
-The cloud forms rings of dust that elongate and contract, never quite touching. The mass moves and disperses with a rhythmic quality that&#39;s hard to look at but harder to look away from.
+The cloud forms rings of dust that elongate and contract, never quite touching. The mass moves and disperses with a rhythmic quality that&#x27;s hard to look at but harder to look away from.
 
 It curls around itself, consuming itself, becoming a ball and then reforming into a narrow wriggling and incorporeal worm.
 
 The skin of the stone ruptures and the blackness evaporated as if it were the night at sunrise.
 
-And sitting there in a puddle of viscous fluid was.....[[something-&gt;room]]</tw-passagedata>
-<tw-passagedata pid="44" name="bat" tags="" position="1868,1251">&lt;&lt;set $type = &quot;Infernal&quot;&gt;&gt;
+And sitting there in a puddle of viscous fluid was.....[[something-&gt;room]]</tw-passagedata><tw-passagedata pid="44" name="bat" tags="" position="1868,1251">&lt;&lt;set $type = &quot;Infernal&quot;&gt;&gt;
 &lt;&lt;set $brutality = random(5, 7)&gt;&gt;
 &lt;&lt;set $guile = random(1, 3)&gt;&gt;
 &lt;&lt;set $malice = random(1, 5)&gt;&gt;
@@ -441,12 +430,11 @@ And sitting there in a puddle of viscous fluid was.....[[something-&gt;room]]</t
 
 The lobes of the cloud expand and beat down repeatedly but erratically. They look like wings until they collapse together, forming a new body. 
 
-It spirals around, and then reforms again; its lobes pressing against the transluscent sphere&#39;s outer skin. They make no impression, and are dispersed.
+It spirals around, and then reforms again; its lobes pressing against the transluscent sphere&#x27;s outer skin. They make no impression, and are dispersed.
 
 Each lobe, 5 you count now, presses on the skin in unison and it bursts. The black burns away as a shadow in a spotlight would.
 
-Laying there, curled up on your windowsill, there was.....[[something-&gt;room]] </tw-passagedata>
-<tw-passagedata pid="45" name="squid" tags="" position="1560,1245">&lt;&lt;set $type = &quot;Corruptor&quot;&gt;&gt;
+Laying there, curled up on your windowsill, there was.....[[something-&gt;room]] </tw-passagedata><tw-passagedata pid="45" name="squid" tags="" position="1560,1245">&lt;&lt;set $type = &quot;Corruptor&quot;&gt;&gt;
 &lt;&lt;set $brutality = random(1, 2)&gt;&gt;
 &lt;&lt;set $guile = random(1, 3)&gt;&gt;
 &lt;&lt;set $malice = random(6, 8)&gt;&gt;
@@ -459,36 +447,33 @@ It faded, became particulate, and solidified again. Veins of iridescent light ca
 
 It was now that you noticed amidst the lightshow that the black backdrop itself was seething and contorting growing slightly larger and tinting the cloud with an uncomfortable darkness. Each particle it touched became glass and settled on top of its crystalline shell. The black core wrapped around its own membrane, as it pulsed and grew and was out in a splash of fluid and glass.
 
-Laying there right on your windowsill...was [[something-&gt;room]]</tw-passagedata>
-<tw-passagedata pid="46" name="room" tags="" position="1700,1400">/%room%/
-&lt;&lt;set $stageOfLife = 1&gt;&gt;
-&lt;&lt;set $timeOfDay = 1&gt;&gt;
+Laying there right on your windowsill...was [[something-&gt;room]]</tw-passagedata><tw-passagedata pid="46" name="room" tags="" position="1700,1400">/%room%/
 &lt;&lt;if $timeOfDay &lt;= 3&gt;&gt;
-&lt;&lt;if $day == 1&gt;&gt;
-&lt;&lt;if visited(&quot;room&quot;) == 1&gt;&gt;
-&lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;$subj is cute, if a little sinister, with eyes like oil and skin that looks wet but scaly. And then $subj smiles a devious, horrid, otherworldly smile.
-&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;$subj looks awfully sturdy, for a newborn, with half formed redbrown wings (or fins, you cannot quite tell) and bony growths which almost resemble armor. $subj pulls $self up onto $poss two clawed feet
-&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;$subj is a gelatenous, half-etheral mass that is dripping tentacles that almost look like ink. But the eye, that one large oscillating eye. $subj knows you.
-&lt;&lt;/if&gt;&gt;
+	&lt;&lt;if $day == 1&gt;&gt;
+		&lt;&lt;if visited(&quot;room&quot;) == 1&gt;&gt;
+			&lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;$subj is cute, if a little sinister, with eyes like oil and skin that looks wet but scaly. And then $subj smiles a devious, horrid, otherworldly smile.
+			&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;$subj looks awfully sturdy, for a newborn, with half formed redbrown wings (or fins, you cannot quite tell) and bony growths which almost resemble armor. $subj pulls $self up onto $poss two clawed feet
+			&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;$subj is a gelatenous, half-etheral mass that is dripping tentacles that almost look like ink. But the eye, that one large oscillating eye. $subj knows you.
+		&lt;&lt;/if&gt;&gt;
 
-[[Feed-&gt;feed]] $obj //(1 action and a food item)// 
-[[Play with-&gt;play_with]] $obj //(1 action)//
-[[Go out with-&gt;go_out]] $obj//(2 actions)//
-[[Look at-&gt;examine]] $name
-[[Check-&gt;look_at_inv]] your pockets
-[[Wait -&gt;wait]]//(1 action)//
+			[[Feed-&gt;feed]] $obj //(1 action and a food item)// 
+			[[Play with-&gt;play_with]] $obj //(1 action)//
+			[[Go out with-&gt;go_out]] $obj//(2 actions)//
+			[[Look at-&gt;examine]] $name
+			[[Check-&gt;look_at_inv]] your pockets
+			[[Wait -&gt;wait]]//(1 action)//
 
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;
-	$name is watching you, grinning.&lt;&lt;if $fury &gt;= $maxFury * 0.5&gt;&gt; You feel cold&lt;&lt;elseif $fury &gt;= $maxFury * .75&gt;&gt; You do not know where $subj is.&lt;&lt;/if&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+			&lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;
+			$name is watching you, grinning.&lt;&lt;if $fury &gt;= $maxFury * 0.5&gt;&gt; You feel cold&lt;&lt;elseif $fury &gt;= $maxFury * .75&gt;&gt; You do not know where $subj is.&lt;&lt;/if&gt;&gt;
 	
-	&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;
-	$subj is floating and oscillating, harmonically resonating with a dull hum to ensure that you know something is amiss.&lt;&lt;if $fury &gt;= $maxFury * 0.5&gt;&gt; You are fatigued as its lifeless eye follows you around your room&lt;&lt;elseif $fury &gt;= $maxFury * .75&gt;&gt; $subj is basking in the streams of sunlight, transmuting brightness into a cloak of shadow&lt;&lt;/if&gt;&gt;
+			&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;
+			$subj is floating and oscillating, harmonically resonating with a dull hum to ensure that you know something is amiss.&lt;&lt;if $fury &gt;= $maxFury * 0.5&gt;&gt; You are fatigued as its lifeless eye follows you around your room&lt;&lt;elseif $fury &gt;= $maxFury * .75&gt;&gt; $subj is basking in the streams of sunlight, transmuting brightness into a cloak of shadow&lt;&lt;/if&gt;&gt;
 	
-	&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;
-	$name is posturing belligerently
-	&lt;&lt;/if&gt;&gt;
-	Your room is &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;frigid.&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;dark.&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;warm.&lt;&lt;/if&gt;&gt;
+			&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;
+			$name is posturing belligerently
+		&lt;&lt;/if&gt;&gt;
+		Your room is &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;frigid.&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;dark.&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;warm.&lt;&lt;/if&gt;&gt;
 
 	What do you want to do?
 	[[Feed -&gt;feed]] $name //(1 action and some food)//
@@ -499,55 +484,31 @@ Laying there right on your windowsill...was [[something-&gt;room]]</tw-passageda
 	[[Wait -&gt;wait]]//(1 action)//
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $day == 2&gt;&gt;
-	
-	
-	&lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;
-		$name is slithering silently in erratic circles, shooting &lt;&lt;if $Characteristics.contains(&quot;Discontented&quot;)&gt;&gt;stern&lt;&lt;elseif $Characteristics.contains(&quot;Grotesque&quot;)&gt;&gt;vile&lt;&lt;elseif $Characteristics.contains(&quot;Burly&quot;)&gt;&gt;intimidating&lt;&lt;else&gt;&gt;devious&lt;&lt;/if&gt;&gt; looks at you.
-	&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;
-	
-	&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;
-	
-	&lt;&lt;/if&gt;&gt;
-	
-	What do you want to do?
-	[[Feed -&gt;feed]] $name //(1 action and some food)//
-	[[Play with  -&gt;play_with]] $name//(1 action)//
-	[[Go out -&gt;go_out]] with $name//(2 actions)//
-	[[Look at -&gt;examine]] $name
-	[[Check-&gt;look_at_inv]] your pockets
-	[[Wait -&gt;wait]]//(1 action)//
-&lt;&lt;elseif $day == 3&gt;&gt;
-	What do you want to do?
-	[[Feed -&gt;feed]] $name //(1 action and some food)//
-	[[Play with  -&gt;play_with]] $name//(1 action)//
-	[[Go out -&gt;go_out]] with $name//(2 actions)//
-	[[Look at -&gt;examine]] $name
-	[[Check-&gt;look_at_inv]] your pockets
-	[[Wait -&gt;wait]]//(1 action)//
-	&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if $actions &lt;= 0&gt;&gt;
-	You need sleep, today was a long day.
+&lt;&lt;if $timeOfDay &gt; 3&gt;&gt;
+	It&#x27;s late, you should go to sleep.
 	[[Go to bed-&gt;bedtime]]
 &lt;&lt;/if&gt;&gt;
+&lt;&lt;if $actions == 0&gt;&gt;
+	Today has been a long day, you need some rest
+	[[Go to bed-&gt;bedtime]]
+&lt;&lt;/if&gt;&gt;
+/%day 2 stuff%/
 
-</tw-passagedata>
-<tw-passagedata pid="47" name="random_class" tags="" position="1870,1125">&lt;&lt;set $randInt = random(2)&gt;&gt;
+
+
+</tw-passagedata><tw-passagedata pid="47" name="random_class" tags="" position="1870,1125">&lt;&lt;set $randInt = random(2)&gt;&gt;
 &lt;&lt;if $randInt == 0&gt;&gt; &lt;&lt;display &quot;squid&quot;&gt;&gt;
 &lt;&lt;elseif $randInt == 1&gt;&gt;&lt;&lt;display &quot;bat&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;display &quot;snek&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata>
-<tw-passagedata pid="48" name="feed" tags="" position="1715,1546">&lt;&lt;if $inventory.contains(&quot;meat&quot;) and $actions &gt; 0&gt;&gt;[[Feed meat to $name(1 action)-&gt;meat]]&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="48" name="feed" tags="" position="1715,1546">&lt;&lt;if $inventory.contains(&quot;meat&quot;) and $actions &gt; 0&gt;&gt;[[Feed meat to $name(1 action)-&gt;meat]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $inventory.contains(&quot;soul&quot;) and $actions &gt; 0&gt;&gt;[[Feed soul to $name(1 action)-&gt;soul]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $inventory.contains(&quot;blood&quot;) and $actions &gt; 0&gt;&gt;[[Feed blood to $name(1 action)-&gt;blood]]&lt;&lt;/if&gt;&gt;
 
 
 [[Back to room-&gt;room]]
-</tw-passagedata>
-<tw-passagedata pid="49" name="play_with" tags="" position="1864,1548">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="50" name="go_out" tags="" position="2000,1550">&lt;&lt;set $noises = [&quot;purrs&quot;, &quot;growls&quot;, &quot;snarls&quot;, &quot;hisses&quot;, &quot;humms&quot;, &quot;moans&quot;, &quot;wails&quot;, &quot;shrieks&quot;, &quot;stutters&quot;]&gt;&gt;
+</tw-passagedata><tw-passagedata pid="49" name="play_with" tags="" position="1864,1548">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="go_out" tags="" position="2000,1550">&lt;&lt;set $noises = [&quot;purrs&quot;, &quot;growls&quot;, &quot;snarls&quot;, &quot;hisses&quot;, &quot;humms&quot;, &quot;moans&quot;, &quot;wails&quot;, &quot;shrieks&quot;, &quot;stutters&quot;]&gt;&gt;
 &lt;&lt;if $timeOfDay == 0&gt;&gt;
 The sun warms your face and $name &lt;&lt;if $malice &gt; $brutality&gt;&gt;$noises[random(4, 6)]&lt;&lt;elseif $brutality &gt; $guile&gt;&gt;$noises[random(7, 8)&lt;&lt;elseif $guile &gt; $malice&gt;&gt;$noises[random(0, 3)]&lt;&lt;else&gt;&gt; is quiet &lt;&lt;/if&gt;&gt; and $subj &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;slithers&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;undulates&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;flutters&lt;&lt;/if&gt;&gt; beside you.
 
@@ -581,12 +542,10 @@ Where do you want to go?
 [[To the school-&gt;school]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $timeOfDay &gt; 3&gt;&gt;
-It is getting late, you should probably head home
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="51" name="examine" tags="" position="2165,1550">&lt;&lt;if $energy gte ($maxEnergy * .5) and $fury lte $maxFury * .5&gt;&gt;
+It is getting late, you should probably head [[home-&gt;room]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="examine" tags="" position="2165,1550">&lt;&lt;if $energy gte ($maxEnergy * .5) and $fury lte $maxFury * .5&gt;&gt;
 $name is looking perky. $poss &lt;&lt;if $type == &quot;Deceptive&quot;&gt;&gt;beady black eyes do not betray any real emotion but $subj is still grinning.&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;tentacles wiggle erratically and $poss tyrant eye tracks you around your room.&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;$cposs wings are not fully formed yet, but its chirps contentedly.&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="52" name="wait" tags="" position="2300,1500">&lt;&lt;set $passTheTime&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="wait" tags="" position="2300,1500">&lt;&lt;set $passTheTime&gt;&gt;
 
 You try to pass some time, and not think about the creature in your room.
 Do you want to:
@@ -596,8 +555,7 @@ Do you want to:
 &lt;&lt;if $timeOfDay == 1&gt;&gt;[[go for a walk-&gt;walk]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $timeOfDay == 2&gt;&gt;[[make dinner for yourself-&gt;dinner]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $timeOfDay == 3&gt;&gt;[[go to sleep-&gt;sleep]]&lt;&lt;/if&gt;&gt;
-[[return to your room-&gt;room]]</tw-passagedata>
-<tw-passagedata pid="53" name="meat" tags="bug" position="1580,1548">
+[[return to your room-&gt;room]]</tw-passagedata><tw-passagedata pid="53" name="meat" tags="bug" position="1580,1548">
 &lt;&lt;set $actions -= 1&gt;&gt;
 &lt;&lt;removeFromInv &quot;meat&quot;&gt;&gt;
 $name devours the meat
@@ -614,8 +572,7 @@ $name roars with joy
 &lt;&lt;set $brutality += 0.4&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 [[Feed some more?-&gt;feed]]
-[[Do something else?-&gt;room]]</tw-passagedata>
-<tw-passagedata pid="54" name="blood" tags="" position="1706,1686">
+[[Do something else?-&gt;room]]</tw-passagedata><tw-passagedata pid="54" name="blood" tags="" position="1706,1686">
 &lt;&lt;set $actions -= 1&gt;&gt;
 &lt;&lt;removeFromInv &quot;blood&quot;&gt;&gt;
 $name slurps up the blood
@@ -636,8 +593,7 @@ $name
 &lt;&lt;set $brutality += 0.4&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 [[Feed some more?-&gt;feed]]
-[[Do something else?-&gt;room]]</tw-passagedata>
-<tw-passagedata pid="55" name="soul" tags="" position="1578,1691">
+[[Do something else?-&gt;room]]</tw-passagedata><tw-passagedata pid="55" name="soul" tags="" position="1578,1691">
 &lt;&lt;set $actions -= 1&gt;&gt;
 &lt;&lt;removeFromInv &quot;soul&quot;&gt;&gt;
 $name subsumes the soul
@@ -649,7 +605,7 @@ $name subsumes the soul
 &lt;&lt;set $energy += 2&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $characteristics.contains[&quot;Obscene&quot;]&gt;&gt; 
-$name+&#39;s eyes light up as the soul turns black and is consumed
+$name+&#x27;s eyes light up as the soul turns black and is consumed
 &lt;&lt;set $fury -= 1&gt;&gt;
 &lt;&lt;set $guile += 0.2&gt;&gt;
 &lt;&lt;set $brutality -= 0.7&gt;&gt;
@@ -658,9 +614,7 @@ $name+&#39;s eyes light up as the soul turns black and is consumed
 &lt;&lt;if $characteristics.contains[&quot;Imposing&quot;]&gt;&gt;
 $name turns $possessive nose up at the soul, &lt;&lt;if $characteristics.containsAny[&quot;Malevolent&quot;, &quot;Discontented&quot;, &quot;Manipulative&quot;]&gt;&gt;and refuses to eat it&lt;&lt;set $actions += 1&gt;&gt;&lt;&lt;else&gt;&gt;but chokes it down anyways &lt;&lt;set $energy -=1&gt;&gt;&lt;&lt;/if&gt;&gt;
 [[Feed some more?-&gt;feed]]
-[[Do something else?-&gt;room]]</tw-passagedata>
-<tw-passagedata pid="56" name="Inventory" tags="" position="2030,1355">&lt;&lt;inv&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="57" name="RandomEvents" tags="" position="2200,1350">&lt;&lt;set $withCreature = true&gt;&gt;
+[[Do something else?-&gt;room]]</tw-passagedata><tw-passagedata pid="56" name="Inventory" tags="" position="2030,1355">&lt;&lt;inv&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="RandomEvents" tags="" position="2200,1350">&lt;&lt;set $withCreature = true&gt;&gt;
 &lt;&lt;set $events = [&quot;e0&quot;, &quot;e1&quot;, &quot;e2&quot;, &quot;e3&quot;, &quot;e4&quot;, &quot;e5&quot;, &quot;e6&quot;, &quot;e7&quot;]&gt;&gt;
 &lt;&lt;set $curEvent&gt;&gt;
 &lt;&lt;if $stageOfLife == 1&gt;&gt;
@@ -675,12 +629,7 @@ $name turns $possessive nose up at the soul, &lt;&lt;if $characteristics.contain
 &lt;&lt;elseif $stageOfLife == 4&gt;&gt;
 &lt;&lt;set $curEvent = $events.pluck(6, 7)&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="58" name="chores" tags="" position="2315,1700">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="59" name="entertain" tags="" position="2545,1690">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="60" name="walk" tags="" position="2190,1700">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="61" name="dinner" tags="" position="2416,1693">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="62" name="sleep" tags="" position="2550,1550">You climb into bed and shut off the lights.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="chores" tags="" position="2315,1700">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="59" name="entertain" tags="" position="2545,1690">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="60" name="walk" tags="" position="2190,1700">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="61" name="dinner" tags="" position="2416,1693">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="62" name="sleep" tags="" position="2550,1550">You climb into bed and shut off the lights.
 
 &lt;&lt;if $stageOfLife == &quot;young&quot;&gt;&gt;
 &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;
@@ -690,14 +639,12 @@ $name turns $possessive nose up at the soul, &lt;&lt;if $characteristics.contain
 &lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &quot;[[Goodnight,|bedtime][$fury-=5]] $name&quot;, you whisper
-[[Go to sleep-&gt;bedtime]] </tw-passagedata>
-<tw-passagedata pid="63" name="breakfast_2" tags="" position="2536,1420">&lt;&lt;set $whatToEat&gt;&gt;
+[[Go to sleep-&gt;bedtime]] </tw-passagedata><tw-passagedata pid="63" name="breakfast_2" tags="" position="2536,1420">&lt;&lt;set $whatToEat&gt;&gt;
 &lt;&lt;set $meal = &quot;breakfast&quot;&gt;&gt;
 What do you want to eat?
 [[Toast|Food][$whatToEat = &quot;toast&quot;]]
 [[Bacon|Food][$whatToEat = &quot;bacon&quot;]]
-[[Cereal|Food][$whatToEat = &quot;cereal&quot;]]</tw-passagedata>
-<tw-passagedata pid="64" name="Food" tags="" position="2350,1350">&lt;&lt;if $whatToEat == &quot;toast&quot;&gt;&gt;
+[[Cereal|Food][$whatToEat = &quot;cereal&quot;]]</tw-passagedata><tw-passagedata pid="64" name="Food" tags="" position="2350,1350">&lt;&lt;if $whatToEat == &quot;toast&quot;&gt;&gt;
 You eat toast
 &lt;&lt;elseif $whatToEat == &quot;bacon&quot;&gt;&gt;
 You make some bacon. Do you want to save some for $name ?
@@ -705,27 +652,18 @@ You make some bacon. Do you want to save some for $name ?
 [[No]]
 &lt;&lt;elseif $whatToEat == &quot;cereal&quot;&gt;&gt;
 Cereal
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="65" name="Yes" tags="" position="2243,1168">You put a strip of bacon in your pocket.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Yes" tags="" position="2243,1168">You put a strip of bacon in your pocket.
 &lt;&lt;addToInv &quot;meat&quot;&gt;&gt;
-(1 piece of &#39;&#39;meat&#39;&#39; added to your inventory)
+(1 piece of &#x27;&#x27;meat&#x27;&#x27; added to your inventory)
 &lt;&lt;set $actions -= 1&gt;&gt;
 &lt;&lt;set $timeOfDay += 1&gt;&gt;
 [[Do something else?-&gt;wait]]
-[[Check-&gt;room]] on $name?</tw-passagedata>
-<tw-passagedata pid="66" name="No" tags="" position="2435,1183">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="67" name="bedtime" tags="" position="1500,1400">&lt;&lt;set $dreams_1 = [&quot;fire&quot;, &quot;darkness&quot;, &quot;light&quot;, &quot;faces&quot;, &quot;impressions&quot;,]&gt;&gt;
+[[Check-&gt;room]] on $name?</tw-passagedata><tw-passagedata pid="66" name="No" tags="" position="2435,1183">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="67" name="bedtime" tags="" position="1500,1400">&lt;&lt;set $dreams_1 = [&quot;fire&quot;, &quot;darkness&quot;, &quot;light&quot;, &quot;faces&quot;, &quot;impressions&quot;,]&gt;&gt;
 &lt;&lt;if $day == 1&gt;&gt;
 &lt;&lt;set $tonightsDream_1 = $dreams_1.pluck()&gt;&gt;
 &lt;&lt;display $tonightsDream_1&gt;&gt;
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="68" name="fire" tags="" position="1350,1300">fire</tw-passagedata>
-<tw-passagedata pid="69" name="darkness" tags="" position="1350,1600">darkness</tw-passagedata>
-<tw-passagedata pid="70" name="light" tags="" position="1350,1500">light</tw-passagedata>
-<tw-passagedata pid="71" name="faces" tags="" position="1349,1175">faces</tw-passagedata>
-<tw-passagedata pid="72" name="impressions" tags="" position="1350,1400">impressions</tw-passagedata>
-<tw-passagedata pid="73" name="e0" tags="event" position="2150,1850">&lt;&lt;if $timeOfDay == 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="fire" tags="" position="1350,1300">fire</tw-passagedata><tw-passagedata pid="69" name="darkness" tags="" position="1350,1600">darkness</tw-passagedata><tw-passagedata pid="70" name="light" tags="" position="1350,1500">light</tw-passagedata><tw-passagedata pid="71" name="faces" tags="" position="1349,1175">faces</tw-passagedata><tw-passagedata pid="72" name="impressions" tags="" position="1350,1400">impressions</tw-passagedata><tw-passagedata pid="73" name="e0" tags="event" position="2148,1848">&lt;&lt;if $timeOfDay == 0&gt;&gt;
 &lt;&lt;if $withCreature == true&gt;&gt;
 Walking down the street outside, the sun glistening on the morning dew, you see $name
 &lt;&lt;else if $withCreature == false&gt;&gt;
@@ -733,17 +671,7 @@ Walking down the street outside, the sun glistening on the morning dew, you see 
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;else if $timeOfDay == 3&gt;&gt;
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="74" name="e1" tags="event" position="2300,1850">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="75" name="e2" tags="event" position="2450,1850">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="76" name="e3" tags="event" position="2600,1850">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="77" name="e4" tags="event" position="2150,2000">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="78" name="e5" tags="event" position="2300,2000">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="79" name="e6" tags="event" position="2450,2000">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="80" name="e7" tags="event" position="2600,2000">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="81" name="park" tags="" position="1850,1850">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="82" name="coffeeshop" tags="" position="1700,1850">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="83" name="school" tags="" position="1850,2000">/%To School%/
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="e1" tags="event" position="2300,1850">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="75" name="e2" tags="event" position="2450,1850">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="76" name="e3" tags="event" position="2600,1850">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="77" name="e4" tags="event" position="2150,2000">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="78" name="e5" tags="event" position="2300,2000">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="79" name="e6" tags="event" position="2450,2000">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="80" name="e7" tags="event" position="2600,2000">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="81" name="park" tags="" position="1850,1850">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="82" name="coffeeshop" tags="" position="1700,1850">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="83" name="school" tags="" position="1850,2000">/%To School%/
 &lt;&lt;if $day == 1 or $day == 7&gt;&gt;
 	&lt;&lt;set $action -= 1&gt;&gt;
 	/%add text about what monster is doing %/
@@ -753,19 +681,12 @@ Walking down the street outside, the sun glistening on the morning dew, you see 
 	
 &lt;&lt;else&gt;&gt;
 	
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="84" name="woods" tags="" position="1550,2000">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="85" name="library" tags="" position="1700,2000">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="86" name="town" tags="" position="1550,1850">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="87" name="club" tags="" position="1400,2000">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="88" name="beach" tags="" position="1400,1850">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="89" name="look_at_inv" tags="" position="1475,1550">&lt;&lt;display &quot;Inventory&quot;&gt;&gt;
-[[Go back-&gt;room]] </tw-passagedata>
-<tw-passagedata pid="90" name="tresspass" tags="" position="1850,2150">&lt;&lt;set $actions -= 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="woods" tags="" position="1550,2000">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="85" name="library" tags="" position="1700,2000">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="86" name="town" tags="" position="1550,1850">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="87" name="club" tags="" position="1400,2000">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="88" name="beach" tags="" position="1400,1850">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="89" name="look_at_inv" tags="" position="1475,1550">&lt;&lt;display &quot;Inventory&quot;&gt;&gt;
+[[Go back-&gt;room]] </tw-passagedata><tw-passagedata pid="90" name="tresspass" tags="" position="1850,2150">&lt;&lt;set $actions -= 1&gt;&gt;
 &lt;&lt;if $schoolBrokenInto == false&gt;&gt;
 
 The doors are locked.
-It&#39;s early, so breaking in might not be the best idea.
+It&#x27;s early, so breaking in might not be the best idea.
 &lt;&lt;if $characteristics.contains(&quot;Firebrand&quot;)&gt;&gt;
 	Do you want $name to [[melt the lock-&gt;melt_school_lock]]?
 &lt;&lt;else&gt;&gt;
@@ -781,9 +702,7 @@ Do you want to...
 [[Enter the school-&gt;tresspass_school_night]] 
 &lt;&lt;/if&gt;&gt;
 [[Leave-&gt;go_out]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="91" name="melt_school_lock" tags="" position="1850,2300">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="92" name="break_school_lock" tags="" position="2000,2300">/%break the lock%/
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="melt_school_lock" tags="" position="1850,2300">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="92" name="break_school_lock" tags="" position="2000,2300">/%break the lock%/
 &lt;&lt;set $schoolBrokenInto to true&gt;&gt;
 &lt;&lt;set $d6roll to random(5)&gt;&gt;
 &lt;&lt;if $brutality &gt;= $d6roll&gt;&gt;
@@ -793,11 +712,7 @@ Do you want to...
 &lt;&lt;/if&gt;&gt;
 	
 
-</tw-passagedata>
-<tw-passagedata pid="93" name="dark_hide_guard" tags="" position="2000,2450">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="94" name="guile_hide_guard" tags="" position="2150,2450">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="95" name="run_guard" tags="" position="2300,2450">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="96" name="stay_guard" tags="" position="2450,2450">&lt;&lt;set $fury += 1&gt;&gt;
+</tw-passagedata><tw-passagedata pid="93" name="dark_hide_guard" tags="" position="2000,2450">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="94" name="guile_hide_guard" tags="" position="2150,2450">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="95" name="run_guard" tags="" position="2300,2450">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="96" name="stay_guard" tags="" position="2450,2450">&lt;&lt;set $fury += 1&gt;&gt;
 The guard runs around the corner&lt;&lt;if $timeOfDay == 3&gt;&gt; with his flashlight on&lt;&lt;/if&gt;&gt;
 
 $name lurks behind your leg
@@ -811,9 +726,7 @@ You respond by...
 
 &lt;&lt;if $characteristics.contains(&quot;Hypnotic&quot;)&gt;&gt;[[~*No*~-&gt;school_hypnotize]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $characteristics.contains(&quot;Obscene&quot;)&gt;&gt;Telling $name to [[ravage his mind-&gt;mind_ravage_school]]&lt;&lt;/if&gt;&gt;
-</tw-passagedata>
-<tw-passagedata pid="97" name="tresspass_school_night" tags="" position="3027,2755">night</tw-passagedata>
-<tw-passagedata pid="98" name="breakin_success" tags="" position="1496.5,2145.5">&lt;&lt;set $d6roll = random(5)&gt;&gt;
+</tw-passagedata><tw-passagedata pid="97" name="tresspass_school_night" tags="" position="3033,2761">night</tw-passagedata><tw-passagedata pid="98" name="breakin_success" tags="" position="1496,2145">&lt;&lt;set $d6roll = random(5)&gt;&gt;
 &lt;&lt;if $timeOfDay == 1&gt;&gt;
 	
 	$name wraps $poss &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;tail&lt;&lt;elseif 		$type == &quot;Corruptor&quot;&gt;&gt;tentacles&lt;&lt;elseif $type == 				&quot;Infernal&quot;&gt;&gt;claws&lt;&lt;/if&gt;&gt; around the chain holding the doors 	shut
@@ -821,37 +734,63 @@ You respond by...
 	$csubj pulls with all $obj might until the metal chain shatters
 	&lt;&lt;if $d6roll &lt;= $guile&gt;&gt;
 	
-	
+	&lt;&lt;if $guardIsIncapacitated == false&gt;&gt;
 		&lt;&lt;display &quot;school_caught&quot;&gt;&gt;
+     &lt;&lt;/if&gt;&gt;
 	&lt;&lt;else&gt;&gt;
-		
+		[[Enter the school?-&gt;tresspass_school_day]]
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
-	it is night
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="99" name="breakin_failure" tags="" position="1371.5,2145.5">failure</tw-passagedata>
-<tw-passagedata pid="100" name="school_caught" tags="" position="1244,2144">&quot;Hey, who&#39;s there!&quot;, you hear from around the corner of the building, out of sight. The sounds of grinding metal must have alerted one of the guards.
+	[[tresspass_school_night]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="breakin_failure" tags="" position="1371,2145">failure</tw-passagedata><tw-passagedata pid="100" name="school_caught" tags="" position="1243,2143">&quot;Hey, who&#x27;s there!&quot;, you hear from around the corner of the building, out of sight. The sounds of grinding metal must have alerted one of the guards.
 
 
 &lt;&lt;if $characteristics.contains(&quot;Dark&quot;)&gt;&gt;[[Hide behind sight-&gt;dark_hide_guard]]&lt;&lt;/if&gt;&gt;
 		
-&lt;&lt;if $guile &gt;= 5&gt;&gt;[[Lurk in the shadows&gt;guile_hide_guard]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $guile &gt;= 5&gt;&gt;[[Lurk in the shadows-&gt;guile_hide_guard]]&lt;&lt;/if&gt;&gt;
 		
 [[Run away-&gt;run_guard]]
 		
-[[Stay-&gt;stay_guard]]</tw-passagedata>
-<tw-passagedata pid="101" name="Lurk in the shadows&gt;guile_hide_guard" tags="" position="1244,2294">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="102" name="broken_earlier" tags="" position="2450,2600">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="103" name="admit_break_chain" tags="" position="2600,2600">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="104" name="school_hypnotize" tags="" position="2750,2600">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="105" name="mind_ravage_school" tags="" position="2900,2600">&lt;&lt;set $fury += 1&gt;&gt;
+[[Stay-&gt;stay_guard]]</tw-passagedata><tw-passagedata pid="101" name="broken_earlier" tags="" position="2446,2600">&lt;&lt;set $d6roll to random(5)&gt;&gt;
+&lt;&lt;if $d6roll + guile &lt;= 2&gt;&gt;
+	The guard looks you over, and shrugs.
+	
+	&quot;Alright,&quot; he says, gruffly. &quot;Just be careful&quot;
+	
+	He walks away.
+	
+	Do you want to...
+	[[Enter the school-&gt;tresspass_school_day]]
+	[[Leave|go_out][$timeOfDay += 1]]
+&lt;&lt;else&gt;&gt;
+	The guard looks you over sternly.
+	
+	&quot;I don&#x27;t believe you&quot; he says. &quot;We&#x27;re going to talk to the police.&quot;
+	Do you...
+	[[Run-&gt;guard_escape]]
+	[[Attack-&gt;guard_attack]]
+	[[Follow him-&gt;guard_follow]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="admit_break_chain" tags="" position="2600,2600">&quot;Come with me then, we&#x27;re going to have a little chat with the police&quot;
+Do you...
+[[Follow him?-&gt;guard_follow]]
+[[Run-&gt;run_guard]] </tw-passagedata><tw-passagedata pid="103" name="school_hypnotize" tags="" position="2750,2600">&lt;&lt;set $guile += 2&gt;&gt;
+$name stares at the guard, who falls into an instant daze.
+&lt;&lt;set $guardIsIncapacitated to true&gt;&gt;
+He will not be a threat for now.
+&lt;&lt;if $timeOfDay == 1&gt;&gt;
+[[Enter the school-&gt;tresspass_school_day]] 
+&lt;&lt;else&gt;&gt;
+[[Enter the school-&gt;tresspass_school_night]] 
+&lt;&lt;/if&gt;&gt;
+[[Leave|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="104" name="mind_ravage_school" tags="" position="2900,2600">&lt;&lt;set $fury += 1&gt;&gt;
 &lt;&lt;set $energy -= 2&gt;&gt;
 &lt;&lt;set $malice += 1&gt;&gt;
 &lt;&lt;set $brutality += 1&gt;&gt;
+&lt;&lt;set $guardIsIncapacitated to true&gt;&gt;
 
 You know words that no person should ever know. You whisper them to $name, still hiding in the shadows cast by your body.
 
-You feel a slight warmth surround you, followed by silence as the guard&#39;s eyes roll back into his head and he collapses, still twitching and convulsing.
+You feel a slight warmth surround you, followed by silence as the guard&#x27;s eyes roll back into his head and he collapses, still twitching and convulsing.
 
 $subj reveals $self after the deed is done.
 
@@ -861,19 +800,17 @@ $subj reveals $self after the deed is done.
 
 &lt;&lt;/if&gt;&gt;
 
-[[Go home-&gt;room]]</tw-passagedata>
-<tw-passagedata pid="106" name="tresspass_school_day" tags="" position="2900,2750">You are in the main hall of your school. It glows with morning light.
+[[Go home-&gt;room]]</tw-passagedata><tw-passagedata pid="105" name="tresspass_school_day" tags="" position="2900,2750">You are in the main hall of your school. It glows with morning light.
 
 Would you like to...
 [[Look around-&gt;explore_school_day]]
-[[Leave|go_out][$timeOfDay += 1]]</tw-passagedata>
-<tw-passagedata pid="107" name="explore_school_day" tags="" position="2900,2900">&lt;&lt;set $d6roll to random(5)&gt;&gt;
+[[Leave|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="106" name="explore_school_day" tags="" position="2975,2906">&lt;&lt;set $d6roll to random(5)&gt;&gt;
 &lt;&lt;if $d6roll &gt;= 4&gt;&gt;
 You hear some scratching noises coming from one of the classrooms.
 Do you want to...
 [[Investigate-&gt;investigate_school_day]]
 [[Turn back-&gt;go_out]]
-&lt;&lt;elseif $d6roll = 0&gt;&gt;
+&lt;&lt;elseif $d6roll == 0&gt;&gt;
 There are murmurings echoing from down the hall.
 Would you like to...
 [[Approach them-&gt;murmurs_school]]
@@ -881,26 +818,23 @@ Would you like to...
 &lt;&lt;else&gt;&gt;
 The school looks just as you had left it. You look around but do not see anything of particular interest.
 [[Leave|go_out][$timeOfDay += 1]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="108" name="investigate_school_day" tags="" position="2900,3050">&lt;&lt;set $turnsUntilDone to 2&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="investigate_school_day" tags="" position="2900,3050">&lt;&lt;set $turnsUntilDone to 2&gt;&gt;
 &lt;&lt;set $chanceToEscape to 0&gt;&gt;
 You walk towards the sound, like large sheets of plastic being slid around.
 
 The door is open to the room where you heard it.
 
-You see a person, clad all in black, cutting the the cables tethering the computer at the front of the room to the teacher&#39;s desk.
+You see a person, clad all in black, cutting the the cables tethering the computer at the front of the room to the teacher&#x27;s desk.
 
 Do you...
 [[Stay hidden-&gt;thief_stay]]
 [[Confront person-&gt;thief_encounter]]
-[[Leave|go_out][$computersAreStolen to true]]</tw-passagedata>
-<tw-passagedata pid="109" name="thief_stay" tags="" position="2900,3200">&lt;&lt;set $d6roll to random(5)&gt;&gt;
+[[Leave|go_out][$computersAreStolen to true]]</tw-passagedata><tw-passagedata pid="108" name="thief_stay" tags="" position="2900,3200">&lt;&lt;set $d6roll to random(5)&gt;&gt;
 &lt;&lt;if $characteristics.contains(&quot;Dark&quot;)&gt;&gt;You stay hidden, enveloped by the shadows pouring out and surrounding $name
 
-&lt;&lt;else&gt;&gt;You try to stay hidden, peeking into the room every so often to keep track of the thief&#39;s [[position-&gt;thief_position]].
+&lt;&lt;else&gt;&gt;You try to stay hidden, peeking into the room every so often to keep track of the thief&#x27;s [[position-&gt;thief_position]].
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata>
-<tw-passagedata pid="110" name="thief_encounter" tags="" position="2775,3200">You step out into the doorway.
+</tw-passagedata><tw-passagedata pid="109" name="thief_encounter" tags="" position="2775,3200">You step out into the doorway.
 
 The thief sees you bolts towards the window.
 
@@ -910,17 +844,47 @@ Do you...
 &lt;&lt;if $characteristics.contains(&quot;Hypnotize&quot;)&gt;&gt;Ask $name to [[compel them to turn around-&gt;thief_compel]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $characteristics.contains(&quot;Imposing&quot;)&gt;&gt;Ask $name to [[take them down-&gt;thief_takedown]]&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $characteristics.contains(&quot;Terrifying&quot;)&gt;&gt;Ask $name to [[instill them with an inescapable fear-&gt;thief_terrify]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $characteristics.contains(&quot;Obscene&quot;)&gt;&gt;Ask $name to [[wrack their body with sickness]]&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="111" name="thief_escape" tags="" position="2775,3350">The thief jumps out through the open window.
+&lt;&lt;if $characteristics.contains(&quot;Obscene&quot;)&gt;&gt;Ask $name to [[wrack their body with sickness]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="thief_escape" tags="" position="2775,3348">The thief jumps out through the open window.
 
 You watch them scamper away in a hurry.
 
-[[Go somewhere else-&gt;go_out]] </tw-passagedata>
-<tw-passagedata pid="112" name="thief_compel" tags="" position="2925,3350">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="113" name="thief_takedown" tags="" position="3075,3350">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="114" name="thief_terrify" tags="" position="3225,3350">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="115" name="wrack their body with sickness" tags="" position="3375,3350">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="116" name="thief_position" tags="" position="2618.3333333333335,3356.666666666667">&lt;&lt;set $d3roll to random(2)&gt;&gt;
+[[Go somewhere else|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="111" name="thief_compel" tags="" position="2925,3350">&lt;&lt;set $thiefStaysAway to false&gt;&gt;
+&lt;&lt;set $guile += 1&gt;&gt;
+As if in a stupor, the thief turns around to face you. He is a boy around your age.
+Do you want to...
+[[Let him leave-&gt;thief_escape]]
+[[Demand that he stays away from the school|thief_escape][$thiefStaysAway = true]]
+[[Kill him on the spot-&gt;kill_thief]] 
+
+
+</tw-passagedata><tw-passagedata pid="112" name="thief_takedown" tags="" position="3075,3350">&lt;&lt;set $thiefIsThwarted = true&gt;&gt;
+&lt;&lt;set $brutality += 1&gt;&gt;
+$name launches $self at the thief and strikes them in the back of the head, knocking them out.
+
+You see that they are a rather young boy, but $name looks at him hungrily
+Do you..
+Let $name [[kill-&gt;kill_thief]] him?
+[[Leave|go_out][$timeOfDay += 1]]
+</tw-passagedata><tw-passagedata pid="113" name="thief_terrify" tags="" position="3225,3350">&lt;&lt;set $friendship += 1&gt;&gt;
+&lt;&lt;set $malice += 1&gt;&gt;
+The thief falls to the floor and covers his head, screaming and whimpering. 
+
+You see that they are a rather young boy, but $name looks at him hungrily
+Do you..
+Let $name [[kill-&gt;kill_thief]] him?
+[[Leave|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="114" name="wrack their body with sickness" tags="" position="3375,3350">&lt;&lt;set $malice += 1&gt;&gt;
+&lt;&lt;set $brutality += 1&gt;&gt;
+&lt;&lt;set $fury += 1&gt;&gt;
+The thief clenches their stomach and begins to vomit profusely.
+
+They are writhing in agony as they fall to the floor.
+
+You see that they are a rather young boy, but $name looks at him hungrily
+Do you..
+Let $name [[kill-&gt;kill_thief]] him?
+[[Leave|go_out][$timeOfDay += 1]]
+
+</tw-passagedata><tw-passagedata pid="115" name="thief_position" tags="" position="2616,3355">&lt;&lt;set $d3roll to random(2)&gt;&gt;
 &lt;&lt;if $turnsUntilDone == 0&gt;&gt;
 	Fail
 &lt;&lt;else&gt;&gt;
@@ -931,41 +895,36 @@ You watch them scamper away in a hurry.
 	&lt;&lt;elseif $d3roll == 2&gt;&gt;
 		The thief is facing the [[door-&gt;thief_position_3]], and you.
 	&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="117" name="thief_position_one" tags="" position="2150.166666666667,2773.5">&lt;&lt;set $turnsUntilDone -= 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="thief_position_one" tags="" position="2150,2773">&lt;&lt;set $turnsUntilDone -= 1&gt;&gt;
 &lt;&lt;set $chanceToEscape = (75 + $guile)&gt;&gt;
 The chopping and rustling continues
 
 Do you...
 [[Try to sneak away-&gt;thief_leave]]
-[[Wait-&gt;thief_position]]</tw-passagedata>
-<tw-passagedata pid="118" name="thief_position_two" tags="" position="2025.166666666667,2773.5">&lt;&lt;set $turnsUntilDone -= 1&gt;&gt;
+[[Wait-&gt;thief_position]]</tw-passagedata><tw-passagedata pid="117" name="thief_position_two" tags="" position="2025,2773">&lt;&lt;set $turnsUntilDone -= 1&gt;&gt;
 &lt;&lt;set $chanceToEscape = 50&gt;&gt;
 The thief continues their work.
 
 Do you...
 [[Try to escape-&gt;thief_leave]] 
-[[Wait a bit longer-&gt;thief_position]] </tw-passagedata>
-<tw-passagedata pid="119" name="thief_position_3" tags="" position="1900.166666666667,2773.5">&lt;&lt;set $turnsUntilDone -= 1&gt;&gt;
+[[Wait a bit longer-&gt;thief_position]] </tw-passagedata><tw-passagedata pid="118" name="thief_position_3" tags="" position="1900,2773">&lt;&lt;set $turnsUntilDone -= 1&gt;&gt;
 &lt;&lt;set $chanceToEscape = 25&gt;&gt;
 
 The burglar continues their work
 
 Do you want to...
 [[Try to escape-&gt;thief_leave]] 
-[[Wait a bit longer...-&gt;thief_position]]</tw-passagedata>
-<tw-passagedata pid="120" name="thief_leave" tags="" position="2130,2631.666666666667">&lt;&lt;set $d100roll to random(100)&gt;&gt;
+[[Wait a bit longer...-&gt;thief_position]]</tw-passagedata><tw-passagedata pid="119" name="thief_leave" tags="" position="2130,2630">&lt;&lt;set $d100roll to random(100)&gt;&gt;
 &lt;&lt;if $d100roll &lt;= $chanceToEscape&gt;&gt;
 You slip away from the burglar and creep down the hallway. You should probably [[go elsewhere-&gt;go_out]] 
 &lt;&lt;else&gt;&gt;
 You begin to creep away when your shoe rubs harshly against the floor, causing it to shriek.
 
-&quot;Hey, who&#39;s there?&quot; a young boy&#39;s voice calls from the room, trying to sound intimidating.
+&quot;Hey, who&#x27;s there?&quot; a young boy&#x27;s voice calls from the room, trying to sound intimidating.
 Do you...
 [[Confront the boy-&gt;confront_thief]]
 [[Run away-&gt;escape_school]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="121" name="confront_thief" tags="" position="1775,2771.666666666667">You stand in front of the door, with $name &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;wrapped around&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;floating next to&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;perched on&lt;&lt;/if&gt;&gt; your shoulder
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="confront_thief" tags="" position="1775,2770">You stand in front of the door, with $name &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;wrapped around&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;floating next to&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;perched on&lt;&lt;/if&gt;&gt; your shoulder
 
 &quot;What....who are you?&quot; the boy says incredulously. He likely is not much older than you.
 
@@ -973,10 +932,10 @@ Do you...
 &quot;[[Leave-&gt;thief_escape]]&quot;, you command
 Ask $name to [[incapacitate-&gt;incapacitate_thief]] him
 Let $name [[kill-&gt;kill_thief]] him
-</tw-passagedata>
-<tw-passagedata pid="122" name="escape_school" tags="" position="2280,2781.666666666667">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="123" name="incapacitate_thief" tags="" position="1775,2921.666666666667">&lt;&lt;set $computersAreStolen to false&gt;&gt;
-&lt;&lt;set $thiefIsThwarted&gt;&gt;
+</tw-passagedata><tw-passagedata pid="121" name="escape_school" tags="" position="2280,2780">&lt;&lt;set $computersAreStolen to true&gt;&gt;
+You bolt away, out the door, and back towards [[town|go_out][$timeOfDay += 1]]
+</tw-passagedata><tw-passagedata pid="122" name="incapacitate_thief" tags="" position="1775,2920">&lt;&lt;set $computersAreStolen to false&gt;&gt;
+&lt;&lt;set $thiefIsThwarted to true&gt;&gt;
 &lt;&lt;set $energy -= 1&gt;&gt;
 &lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;
 $name lunges at the boy, wrapping $obj tail around his neck. His eyes roll back and he is unconscious.
@@ -992,10 +951,11 @@ $name looks at the boy, and then at you with fury and in $obj eye.
 
 Let $name [[kill-&gt;kill_thief]] the boy?
 Order $name to [[leave|go_out][$timeOfDay += 1]] with you
-&lt;&lt;/if&gt;&gt;</tw-passagedata>
-<tw-passagedata pid="124" name="kill_thief" tags="" position="1925,2921.666666666667">&lt;&lt;set $fury += 2&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="kill_thief" tags="" position="1925,2920">&lt;&lt;set $fury += 2&gt;&gt;
 &lt;&lt;if $brutality &gt;= 5&gt;&gt;
 &lt;&lt;set $friendship += 1&gt;&gt;
+&lt;&lt;set $thiefIsThwarted to true&gt;&gt;
+&lt;&lt;set $thiefIsDead to true&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $malice += 5&gt;&gt;
 &lt;&lt;set energy += 1&gt;&gt;
@@ -1014,11 +974,127 @@ Let $name [[devour-&gt;thief_eat]] his soul
 $name leaps towards the boy, landing on his head. $name proceeds to drive $poss fists into him, each punctuated by dull meaty thuds.
 Let $name [[drink-&gt;thief_eat]] his blood?
 &lt;&lt;/if&gt;&gt;
-[[Leave|go_out][$timeOfDay += 1]]</tw-passagedata>
-<tw-passagedata pid="125" name="murmurs_school" tags="" position="2775,3050">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="126" name="stop_choking" tags="" position="1775,3071.666666666667">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="127" name="keep_choking" tags="" position="1925,3071.666666666667">Double-click this passage to edit it.</tw-passagedata>
-<tw-passagedata pid="128" name="thief_eat" tags="" position="2073.3333333333335,3071.666666666667">Double-click this passage to edit it.</tw-passagedata>
-</tw-storydata>
+[[Leave|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="124" name="murmurs_school" tags="" position="2773,3050">You cannot quite place where they are coming from, but they intensify as you walk down the hall.
 
+Would you like to...
+[[Investigate further?-&gt;investigate_school_murmurs]]
+[[Leave|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="125" name="stop_choking" tags="" position="1920,3203">&lt;&lt;set $d10roll to random(9)&gt;&gt;
+
+You ask $name to stop choking the boy.
+
+&lt;&lt;if $d10roll + $friendship &gt;= 5&gt;&gt;
+$csubj complies, and releases the boy. His body crumples to the ground, asleep. You decide to leave him there for others to find.
+&lt;&lt;else&gt;&gt;
+$csubj ignores your request. $name strangles the boy until you hear his spine snap.
+$csubj looks at you...
+Let $name [[eat-&gt;thief_eat]] the boy
+&lt;&lt;/if&gt;&gt;
+[[Go someplace else|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="126" name="keep_choking" tags="" position="1925,3070">$name strangles the boy until you hear his spine snap.
+$csubj looks at you...
+Let $name [[eat-&gt;thief_eat]] the boy
+
+[[Go someplace else|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="127" name="thief_eat" tags="" position="2071,3070">&lt;&lt;if $type == &quot;Deciever&quot;&gt;&gt;
+	You watch in horror as $name rips the corpse apart, devouring each section in its entirety.
+	&lt;&lt;set $energy += 2&gt;&gt;
+	&lt;&lt;if $characteristics.contains(&quot;Carnivore&quot;)&gt;&gt;
+		&lt;&lt;set $energy += 1&gt;&gt;
+		&lt;&lt;set $fury -= 1&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $type == &quot;Corruptor&quot;&gt;&gt;
+	$name wriggles $obj tentacles and an almost imperceptible mist, like heat waves, leaks from the corpse&#x27;s face. $name draws it in and it is gone.
+	&lt;&lt;set $energy += 2&gt;&gt;
+	&lt;&lt;if $characteristics.contains(&quot;Reaper&quot;)&gt;&gt;
+		&lt;&lt;set $energy += 3&gt;&gt;
+		&lt;&lt;set $malice += 1&gt;&gt;
+		&lt;&lt;set $fury += 2&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $type == &quot;Infernal&quot;&gt;&gt;
+	$name bites into the boy&#x27;s neck to feed. His skin turns pallid, his face becomes gaunt.
+	&lt;&lt;set $energy += 2&gt;&gt;
+	&lt;&lt;if $characteristics.contains(&quot;Bloodthirsty&quot;)&gt;&gt;
+		&lt;&lt;set $energy += 1&gt;&gt;
+		&lt;&lt;set $brutality += 1&gt;&gt;
+		&lt;&lt;set $fury -= 1&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+[[Leave|go_out][$timeOfDay += 1]]</tw-passagedata><tw-passagedata pid="128" name="guard_escape" tags="" position="2426,2778">&lt;&lt;set $d6roll to random(5)&gt;&gt;
+&lt;&lt;if $d6roll &lt;= 4&gt;&gt;
+You run until your legs could no longer carry you. You [[escaped|go_out][$timeOfDay += 1]]
+&lt;&lt;else&gt;&gt;
+You run, but are too slow. The guard [[catches-&gt;guard_catches_up]] you.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="guard_attack" tags="" position="2551,2780">Tell $name to [[strike-&gt;guard_strike]] him in the face
+Tell $name to go for his [[eyes-&gt;guard_eyes]]
+Tell $name to [[kill him fast-&gt;guard_kill]]</tw-passagedata><tw-passagedata pid="130" name="guard_follow" tags="" position="2676,2781">&lt;&lt;set $timeOfDay to 4&gt;&gt;
+&lt;&lt;set $policeIncidents += 1&gt;&gt;
+The guard grabs your arm and takes you to the police.
+
+They question you, tell you how this won&#x27;t look good on your record, are generally stern and gruff, but with a sense of confusion underlying the it all.
+
+$name hides in your bag throughout.
+
+They send you on your way after many hours. It is dark out by the time you leave the precinct.
+
+[[Go home-&gt;room]]</tw-passagedata><tw-passagedata pid="131" name="guard_catches_up" tags="" position="2428,2926">&lt;&lt;set $timeOfDay to 4&gt;&gt;
+&lt;&lt;set $policeIncidents += 1&gt;&gt;
+The guard tackles you and takes you to the police.
+
+They question you, tell you how this won&#x27;t look good on your record, are generally stern and gruff, but with a sense of confusion underlying the it all.
+
+$name hides in your bag throughout.
+
+They send you on your way after many hours. It is dark out by the time you leave the precinct.
+
+[[Go home-&gt;room]]
+
+
+
+</tw-passagedata><tw-passagedata pid="132" name="investigate_school_murmurs" tags="" position="2650,3200">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="133" name="guard_strike" tags="" position="2558,2916">&lt;&lt;set $energy -= 1&gt;&gt;
+&lt;&lt;set $d6roll to random(5)&gt;&gt;
+$name strikes the guard in the face
+&lt;&lt;if $energy &gt; 0&gt;&gt;
+&lt;&lt;if $d6roll + $brutality &gt;= 5&gt;&gt;
+&lt;&lt;brutality += 2&gt;&gt;
+The punch lands flawlessly. He is out cold.
+&lt;&lt;set $guardIsIncapacitated to true&gt;&gt;
+Do you want to...
+&lt;&lt;if $timeOfDay == 1&gt;&gt;
+[[Enter the school-&gt;tresspass_school_day]] 
+&lt;&lt;else&gt;&gt;
+[[Enter the school-&gt;tresspass_school_night]] 
+&lt;&lt;/if&gt;&gt;
+[[Leave|go_out][$timeOfDay += 1]]
+&lt;&lt;else&gt;&gt;
+&lt;&lt;brutality += 1&gt;&gt;
+He looks dazed for a moment..
+Do you want to
+[[Hit him again-&gt;guard_strike]] //(Will tire $name out)//
+[[Run-&gt;run_guard]] 
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+$name is too tired to fight
+[[Run-&gt;run_guard]] 
+[[Surrender-&gt;guard_follow]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="134" name="guard_eyes" tags="" position="2701,2925">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="135" name="guard_kill" tags="" position="2826,2925">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="136" name="Title" tags="" position="2170,5">&lt;h1&gt;DevilMother&lt;/H1&gt;
+&lt;h4&gt;A game by Hyacinth Nil&lt;/h4&gt;
+&lt;p&gt;[[Wake up-&gt;Start]]&lt;/p&gt; 
+
+
+Stylesheet adapted from</tw-passagedata></tw-storydata>
+
+<tw-storydata name="Spoop" startnode="" creator="Twine" creator-version="2.0.8" ifid="40E4E4C7-6E1E-4339-B34E-62227BAB6553" format="Harlowe" options=""><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+
+
+</script></tw-storydata>
 
